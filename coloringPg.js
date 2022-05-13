@@ -15,26 +15,31 @@ function draw(x, y) {
     ctx.fill();
     ctx.closePath();
 }
-function makeGrid(x, y, inc) {
+function makeGrid(startX, startY, x, y, inc) {
     // vertical lines
-    for (var xValue = 0; xValue <= x; xValue += inc) {
-        for (var yValue = 0; yValue <= y; yValue++) {
+    for (var xValue = startX; xValue <= x; xValue += inc) {
+        for (var yValue = startY; yValue <= y; yValue++) {
             draw(xValue, yValue);
         }
     }
     // horizontal lines
-    for (var yValue = 0; yValue <= y; yValue += inc) {
-        for (var xValue = 0; xValue <= x; xValue++) {
+    for (var yValue = startY; yValue <= y; yValue += inc) {
+        for (var xValue = startX; xValue <= x; xValue++) {
             draw(xValue, yValue);
         }
     }
 }
-makeGrid(canvas.width, canvas.height, 40);
+makeGrid(0, 0, canvas.width, canvas.height, 40);
 canvas.addEventListener("click", function (event) {
-    // for (let i = 0; i <= pairsList.length; i++)
-    if (event.offsetX <= 40 && event.offsetY <= 40) {
-        makeGrid(40, 40, 1);
+    for (var _i = 0, pairsList_1 = pairsList; _i < pairsList_1.length; _i++) {
+        var p = pairsList_1[_i];
+        if ((event.offsetX <= p[0] && event.offsetX >= p[0] - 40) && (event.offsetY <= p[1] && event.offsetY >= p[1] - 40)) {
+            makeGrid(p[0] - 40, p[1] - 40, p[0], p[1], 1);
+        }
     }
+    // if (event.offsetX <= 40 && event.offsetY <= 40){
+    //     makeGrid(40, 40, 1);
+    // }
 });
 // heredity : transmission of traits from one generation to next
 // character : heritable feature that varies among individuals
