@@ -51,3 +51,6 @@ canvas.addEventListener("click", function (event) {
         }
     }
 });
+ctx.font = "15px Calibri";
+ctx.fillStyle = "black";
+ctx.fillText("1", 17, 25);
