@@ -41,9 +41,15 @@ function makeGrid(startX, startY, x, y, inc) {
     }
 }
 makeGrid(0, 0, canvas.width, canvas.height, 40);
+color = "white";
+for (var _i = 0, pairsList_1 = pairsList; _i < pairsList_1.length; _i++) {
+    var p = pairsList_1[_i];
+    makeGrid(p[0] - 38, p[1] - 38, p[0] - 1, p[1] - 1, 1);
+}
+color = "black";
 canvas.addEventListener("click", function (event) {
-    for (var _i = 0, pairsList_1 = pairsList; _i < pairsList_1.length; _i++) {
-        var p = pairsList_1[_i];
+    for (var _i = 0, pairsList_2 = pairsList; _i < pairsList_2.length; _i++) {
+        var p = pairsList_2[_i];
         if ((event.offsetX <= p[0] && event.offsetX >= p[0] - 40) && (event.offsetY <= p[1] && event.offsetY >= p[1] - 40)) {
             makeGrid(p[0] - 38, p[1] - 38, p[0] - 1, p[1] - 1, 1);
         }
@@ -78,8 +84,8 @@ blackBtn.addEventListener("click", function (event) {
 });
 clearBtn.addEventListener("click", function (event) {
     color = "white";
-    for (var _i = 0, pairsList_2 = pairsList; _i < pairsList_2.length; _i++) {
-        var p = pairsList_2[_i];
+    for (var _i = 0, pairsList_3 = pairsList; _i < pairsList_3.length; _i++) {
+        var p = pairsList_3[_i];
         makeGrid(p[0] - 38, p[1] - 38, p[0] - 1, p[1] - 1, 1);
     }
 });
