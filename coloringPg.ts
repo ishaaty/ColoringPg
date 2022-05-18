@@ -17,7 +17,7 @@ let color = "black";
 
 for(let i = 0; i <= canvas.height; i += 40){
     for (let j = 0; j <= canvas.width; j += 40){
-        pairsList.push([i,j])
+        pairsList.push([i,j]);
     }
 }
 
@@ -45,7 +45,12 @@ function makeGrid(startX : number, startY : number, x : number, y : number, inc 
     }
 }
 
-makeGrid(0, 0, canvas.width, canvas.height, 40)
+makeGrid(0, 0, canvas.width, canvas.height, 40);
+color = "white";
+for (const p of pairsList){
+    makeGrid(p[0] - 38, p[1] - 38, p[0] - 1, p[1] - 1, 1);
+}
+color = "black";
 
 canvas.addEventListener("click", function (event : MouseEvent){
     for (const p of pairsList){
@@ -54,7 +59,6 @@ canvas.addEventListener("click", function (event : MouseEvent){
         }
     }
 });
-
 
 redBtn.addEventListener("click", function (event : MouseEvent){
     color = "red";
