@@ -1,20 +1,7 @@
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
-// const redBtn = document.querySelector("#red") as HTMLButtonElement;
-// const orangeBtn = document.querySelector("#orange") as HTMLButtonElement;
-// const yellowBtn = document.querySelector("#yellow") as HTMLButtonElement;
-// const greenBtn = document.querySelector("#green") as HTMLButtonElement;
-// const blueBtn = document.querySelector("#blue") as HTMLButtonElement;
-// const purpleBtn = document.querySelector("#purple") as HTMLButtonElement;
-// const pinkBtn = document.querySelector("#pink") as HTMLButtonElement;
-// const whiteBtn = document.querySelector("#white") as HTMLButtonElement;
-// const blackBtn = document.querySelector("#black") as HTMLButtonElement;
-// const clearBtn = document.querySelector("#clear") as HTMLButtonElement;
 var pairsList = [];
 var color = "black";
-// document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
-//     color = elm.dataset.color;
-//   })
 document.querySelectorAll(".colorBtn").forEach(function (elm) {
     elm.addEventListener("click", function (event) {
         var clickedColor = event.currentTarget;
@@ -64,36 +51,3 @@ canvas.addEventListener("click", function (event) {
         }
     }
 });
-// redBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "red";
-// });
-// orangeBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "orange";
-// });
-// yellowBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "yellow";
-// });
-// greenBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "green";
-// });
-// blueBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "blue";
-// });
-// purpleBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "purple";
-// });
-// pinkBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "pink";
-// });
-// whiteBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "white";
-// });
-// blackBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "black";
-// });
-// clearBtn.addEventListener("click", function (event : MouseEvent){
-//     color = "white";
-//     for (const p of pairsList){
-//         makeGrid(p[0] - 38, p[1] - 38, p[0] - 1, p[1] - 1, 1);
-//     }
-// });
