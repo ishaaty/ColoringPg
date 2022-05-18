@@ -7,7 +7,7 @@ let color = "black";
 
 document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
     elm.addEventListener("click", function (event : MouseEvent){
-        let clickedColor = event.currentTarget as HTMLElement
+        let clickedColor = event.currentTarget as HTMLElement;
         color = clickedColor.dataset.key;
     })
 });
@@ -58,3 +58,11 @@ canvas.addEventListener("click", function (event : MouseEvent){
         }
     }
 });
+
+
+ctx.font = "15px Calibri";
+ctx.fillStyle = "black";
+ctx.fillText("1", 17, 25);
+
+
+
