@@ -4,6 +4,13 @@ let ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
 let pairsList = [];
 let color = "black";
 
+for(let i = 0; i <= canvas.height; i += 40){
+    for (let j = 0; j <= canvas.width; j += 40){
+        pairsList.push([i,j]);
+    }
+}
+
+console.log(pairsList)
 
 document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
     elm.addEventListener("click", function (event : MouseEvent){
@@ -12,12 +19,6 @@ document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
     })
 });
 
-
-for(let i = 0; i <= canvas.height; i += 40){
-    for (let j = 0; j <= canvas.width; j += 40){
-        pairsList.push([i,j]);
-    }
-}
 
 function draw(x : number = 0, y : number = 0, c : string) : void {
     ctx.beginPath();
