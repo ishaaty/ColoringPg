@@ -2,17 +2,18 @@ var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
 var pairsList = [];
 var color = "black";
+for (var i = 0; i <= canvas.height; i += 40) {
+    for (var j = 0; j <= canvas.width; j += 40) {
+        pairsList.push([i, j]);
+    }
+}
+console.log(pairsList);
 document.querySelectorAll(".colorBtn").forEach(function (elm) {
     elm.addEventListener("click", function (event) {
         var clickedColor = event.currentTarget;
         color = clickedColor.dataset.key;
     });
 });
-for (var i = 0; i <= canvas.height; i += 40) {
-    for (var j = 0; j <= canvas.width; j += 40) {
-        pairsList.push([i, j]);
-    }
-}
 function draw(x, y, c) {
     if (x === void 0) { x = 0; }
     if (y === void 0) { y = 0; }
