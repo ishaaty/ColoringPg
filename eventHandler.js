@@ -1,4 +1,4 @@
-var color = "white";
+var color = "black";
 var pixelsList = [];
 // filling pairsList
 for (var x = 0; x <= canvas.height; x += 40) {
@@ -10,7 +10,7 @@ for (var x = 0; x <= canvas.height; x += 40) {
 // console.log(pixelsList);
 window.addEventListener("load", function () {
     // creating the grid
-    var pixelGrid = pixelsList[0];
+    var pixelGrid = pixelsList[0]; // contains coordinates (0,0)
     pixelGrid.changeColor("black");
     pixelGrid.makeOrColorGrid(0, 0, canvas.width, canvas.height, 40);
     // filling the grid with white squares
@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
         var p = pixelsList_1[_i];
         p.changeColor("white");
         p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
-        // p.changeColor("black");
+        p.changeColor("black");
     }
 });
 // changing color
