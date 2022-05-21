@@ -1,4 +1,4 @@
-let color = "white";
+let color = "black";
 let pixelsList = [];
 
 // filling pairsList
@@ -8,8 +8,6 @@ for(let x = 0; x <= canvas.height; x += 40){
         pixelsList.push(pixel);
     }
 }
-
-// console.log(pixelsList);
 
 window.addEventListener("load", function () {
     // creating the grid
@@ -21,7 +19,7 @@ window.addEventListener("load", function () {
     for (const p of pixelsList){
         p.changeColor("white");
         p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
-        // p.changeColor("black");
+        p.changeColor("black");
     }
 });
 
@@ -31,7 +29,6 @@ document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
         let clickedColor = event.currentTarget as HTMLElement;
         for (const p of pixelsList){
             p.changeColor(clickedColor.dataset.key);
-            console.log(`Changed color to ${clickedColor.dataset.key} !`)
         }
     })
 });
@@ -41,7 +38,6 @@ canvas.addEventListener("click", function (event : MouseEvent){
     for (const p of pixelsList){
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
             p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
-            console.log("Clicked canvas!")
         }
     }
 });
