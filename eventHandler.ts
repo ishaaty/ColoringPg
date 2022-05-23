@@ -33,7 +33,7 @@ document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
     })
 });
 
-// to color in pixel when user clicks
+// coloring in a pixel when user clicks
 canvas.addEventListener("click", function (event : MouseEvent){
     for (const p of pixelsList){
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
