@@ -20,11 +20,11 @@ class Pixel {
     constructor (xCoordinate : number, yCoordinate : number, color? : string){
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
-        this.color = color || "white"
+        this.color = color || "white";
     }
 
     changeColor(color : string){
-        this.color = color
+        this.color = color;
     }
 
     fill(x : number = 0, y : number = 0) : void {
@@ -52,6 +52,10 @@ class Pixel {
     }
     
 }
+
+// class PixelNumbers extends Pixel {
+
+// }
 
 
 // add number sub-class:
