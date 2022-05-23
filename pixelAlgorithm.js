@@ -44,7 +44,7 @@ var Pixel = /** @class */ (function () {
     };
     return Pixel;
 }());
-// add number sub-class
+// add number sub-class:
 // ctx.font = "15px Calibri";
 // ctx.fillStyle = "black";
 // ctx.fillText("1", 17, 25);
