@@ -1,15 +1,35 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
 // red : 0
-// orange : 1
-// yellow : 2
-// green : 3
-// blue : 4
-// purple : 5
-// pink : 6
-// brown : 7
-// white : 8
-// black : 9
+// orangered : 1
+// orange : 2
+// yellow : 3
+// yellowgreen : 4
+// green : 5
+// lightblue : 6
+// blue : 7
+// blueviolet : 8
+// purple : 9
+// pink : 10
+// grey : 11
+// brown : 12
+// whitesmoke : 13
+// black : 14
 var Pixel = /** @class */ (function () {
     function Pixel(xCoordinate, yCoordinate, color) {
         this.xCoordinate = xCoordinate;
@@ -44,7 +64,17 @@ var Pixel = /** @class */ (function () {
     };
     return Pixel;
 }());
-// add number sub-class:
-// ctx.font = "15px Calibri";
-// ctx.fillStyle = "black";
-// ctx.fillText("1", 17, 25);
+var PixelNumber = /** @class */ (function (_super) {
+    __extends(PixelNumber, _super);
+    function PixelNumber(xCoordinate, yCoordinate, color, num) {
+        var _this = _super.call(this, xCoordinate, yCoordinate, color) || this;
+        _this.num = num;
+        return _this;
+    }
+    PixelNumber.prototype.insertNum = function (x, y, num) {
+        ctx.font = "15px Calibri";
+        ctx.fillStyle = "black";
+        ctx.fillText("".concat(num), x - 23, y - 15);
+    };
+    return PixelNumber;
+}(Pixel));
