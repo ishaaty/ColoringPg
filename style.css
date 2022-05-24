@@ -1,3 +1,8 @@
+h1 {
+    font-size : 30;
+    font-weight : bold;
+}
+
 canvas {
     border: 3px solid black;
     padding-left: 0;
@@ -14,3 +19,26 @@ canvas {
     left: 0;
     right: 0;
 }
+
+.colorBtn {
+    display : grid;
+    grid-column : 1;
+    margin : 10px;
+    width : 122px;
+    height : 30px;
+    font-size : 18px
+}
+
+p {
+    display : grid;
+    grid-column : 1;
+    margin : 10px;
+    width : 122px;
+    height : 30px;
+    font-size : 20px;
+}
+
+.colorBtn:active {
+    border-color : gold;
+}
+

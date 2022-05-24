@@ -1,5 +1,6 @@
 let color = "black";
 let pixelsList = [];
+let currentColor = document.querySelector("#currentColor") as HTMLParagraphElement;
 
 // filling pairsList
 for(let x = 0; x <= canvas.height; x += 40){
@@ -27,6 +28,7 @@ window.addEventListener("load", function () {
 document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
     elm.addEventListener("click", function (event : MouseEvent){
         let clickedColor = event.currentTarget as HTMLElement;
+        currentColor.textContent = (`Current Color: ${clickedColor.textContent}`);
         for (const p of pixelsList){
             p.changeColor(clickedColor.dataset.key);
         }
