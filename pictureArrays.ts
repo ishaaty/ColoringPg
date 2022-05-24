@@ -1,5 +1,7 @@
 let rainbowHeartArray = [];
 
+let checkRainbowHeart = [];
+
 for(let x = 0; x <= 800; x += 40){
     for (let y = 0; y <= 800; y += 40){
         switch(true){
