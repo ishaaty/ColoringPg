@@ -1,9 +1,9 @@
-let canvas = document.querySelector("canvas") as HTMLCanvasElement;
+
 let rainbowHeartArray = [];
 
 
-for(let x = 0; x <= canvas.height; x += 40){
-    for (let y = 0; y <= canvas.width; y += 40){
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
         switch(true){
             case((x === 120) && (y >= 280 && y <= 440)):
             case((y === 200) && ((x >= 200 && x <= 320) || (x >= 520 && x <= 640))):

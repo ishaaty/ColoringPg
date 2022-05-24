@@ -71,6 +71,6 @@ class PixelNumber extends Pixel {
         ctx.fillStyle = "black";
         ctx.fillText(`${num}`, x - 23, y - 15);
     }
-    
+
 }
 

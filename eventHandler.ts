@@ -1,3 +1,4 @@
+
 let color = "black";
 let pixelsList = [];
 let currentColor = document.querySelector("#currentColor") as HTMLParagraphElement;
