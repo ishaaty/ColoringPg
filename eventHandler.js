@@ -1,5 +1,6 @@
 var color = "black";
 var pixelsList = [];
+var currentColor = document.querySelector("#currentColor");
 // filling pairsList
 for (var x = 0; x <= canvas.height; x += 40) {
     for (var y = 0; y <= canvas.width; y += 40) {
@@ -34,6 +35,7 @@ window.addEventListener("load", function () {
 document.querySelectorAll(".colorBtn").forEach(function (elm) {
     elm.addEventListener("click", function (event) {
         var clickedColor = event.currentTarget;
+        currentColor.textContent = ("Current Color: ".concat(clickedColor.textContent));
         for (var _i = 0, pixelsList_1 = pixelsList; _i < pixelsList_1.length; _i++) {
             var p = pixelsList_1[_i];
             p.changeColor(clickedColor.dataset.key);
