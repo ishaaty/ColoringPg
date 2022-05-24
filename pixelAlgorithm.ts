@@ -74,3 +74,20 @@ class PixelNumber extends Pixel {
 
 }
 
+class checkColor extends PixelNumber {
+    userColor : string;
+
+    constructor(xCoordinate : number, yCoordinate : number, pixelColor : string, pixelNum : number, userColor : string){
+        super(xCoordinate, yCoordinate, pixelColor, pixelNum);
+        this.userColor = userColor;
+    }
+
+
+    incorrect(){
+    }
+
+    correct(){
+
+    }
+}
+
