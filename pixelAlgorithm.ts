@@ -84,10 +84,10 @@ class checkColor extends PixelNumber {
 
 
     incorrect(){
+        if (this.userColor !== pixelColor)
     }
 
     correct(){
 
     }
 }
-
