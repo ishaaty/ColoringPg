@@ -2,15 +2,20 @@ let canvas = document.querySelector("canvas") as HTMLCanvasElement;
 let ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
 
 // red : 0
-// orange : 1
-// yellow : 2
-// green : 3
-// blue : 4
-// purple : 5
-// pink : 6
-// brown : 7
-// white : 8
-// black : 9
+// orangered : 1
+// orange : 2
+// yellow : 3
+// yellowgreen : 4
+// green : 5
+// lightblue : 6
+// blue : 7
+// blueviolet : 8
+// purple : 9
+// pink : 10
+// grey : 11
+// brown : 12
+// whitesmoke : 13
+// black : 14
 
 class Pixel {
     xCoordinate : number;
@@ -53,14 +58,19 @@ class Pixel {
     
 }
 
-// class PixelNumbers extends Pixel {
+class PixelNumber extends Pixel {
+    num : number;
 
-// }
+    constructor(xCoordinate : number, yCoordinate : number, color: string, num : number){
+        super(xCoordinate, yCoordinate, color);
+        this.num = num;
+    }
 
-
-// add number sub-class:
-// ctx.font = "15px Calibri";
-// ctx.fillStyle = "black";
-// ctx.fillText("1", 17, 25);
-
+    insertNum (x : number, y : number, num : number){
+        ctx.font = "15px Calibri";
+        ctx.fillStyle = "black";
+        ctx.fillText(`${num}`, x - 23, y - 15);
+    }
+    
+}
 
