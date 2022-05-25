@@ -32,9 +32,9 @@ class Pixel {
         this.color = color;
     }
 
-    fill(x : number = 0, y : number = 0) : void {
+    fill(x : number = 0, y : number = 0, color? : string) : void {
         ctx.beginPath();
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = color || this.color;
         ctx.arc(x, y, 1, 0, Math.PI*2);
         ctx.fill();
         ctx.closePath();
@@ -86,8 +86,11 @@ class CheckablePixel extends PixelNumber {
         if (this.color === this.correctColor) {
             this.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1);
         } else {
-            ctx.fillText(`${this.num} X`, this.xCoordinate - 23, this.yCoordinate - 15);
+            super.changeColor("white")
+            super.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1)
+            ctx.fillStyle = "black"
+            ctx.fillText(`${this.num}X`, this.xCoordinate - 23, this.yCoordinate - 15);
+            ctx.fillStyle = this.color;
         }
     }
 }
-
