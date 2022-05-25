@@ -50,13 +50,25 @@ document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
     })
 });
 
+// // coloring in a pixel when user clicks
+// canvas.addEventListener("click", function (event : MouseEvent){
+//     for (const p of pixelsList){
+//         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
+//             console.log(`${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
+//             p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
+//         }
+//     }
+// });
+
+
 // coloring in a pixel when user clicks
 canvas.addEventListener("click", function (event : MouseEvent){
-    for (const p of rainbowHeartArray){
-        if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
-            console.log(`${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
-            p.checkColor(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
+    for (const r of rainbowHeartArray){
+        if ((event.offsetX <= r.xCoordinate && event.offsetX >= r.xCoordinate - 40) && (event.offsetY <= r.yCoordinate && event.offsetY >= r.yCoordinate - 40)){
+            // console.log(`${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
+            p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
         }
     }
 });
+
 
