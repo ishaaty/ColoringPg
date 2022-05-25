@@ -44,7 +44,7 @@ document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
     elm.addEventListener("click", function (event : MouseEvent){
         let clickedColor = event.currentTarget as HTMLElement;
         currentColor.textContent = (`Current Color: ${clickedColor.textContent}`);
-        for (const p of pixelsList){
+        for (const p of rainbowHeartArray){
             p.changeColor(clickedColor.dataset.key);
         }
     })
@@ -52,10 +52,10 @@ document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
 
 // coloring in a pixel when user clicks
 canvas.addEventListener("click", function (event : MouseEvent){
-    for (const p of pixelsList){
+    for (const p of rainbowHeartArray){
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
             console.log(`${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
-            p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
+            p.checkColor(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
         }
     }
 });

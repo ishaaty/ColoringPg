@@ -16,15 +16,15 @@ for(let x = 0; x <= 800; x += 40){
             case((y === 600) && (x === 280 || x === 560)):
             case((y === 640) && (x === 320 || x === 520)):
             case((y === 680) && (x === 360 || x === 480)):
-                let p : PixelNumber = new PixelNumber(x, y, "black", 14);
+                let p : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
                 rainbowHeartArray.push(p);
                 break;
             default:
-                let p : PixelNumber = new PixelNumber(x, y, "whitesmoke", 13);
-                rainbowHeartArray.push(p);
+                let px : CheckablePixel = new CheckablePixel(x, y, "whitesmoke", 13, "whitesmoke");
+                rainbowHeartArray.push(px);
                 break;
         }
     }
-}, 
+}
 
 console.log(rainbowHeartArray);

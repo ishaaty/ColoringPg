@@ -1,6 +1,7 @@
-var rainbowHeartArray = [];
-for (var x = 0; x <= 800; x += 40) {
-    for (var y = 0; y <= 800; y += 40) {
+"use strict";
+let rainbowHeartArray = [];
+for (let x = 0; x <= 800; x += 40) {
+    for (let y = 0; y <= 800; y += 40) {
         switch (true) {
             case ((x === 120) && (y >= 280 && y <= 440)):
             case ((y === 200) && ((x >= 200 && x <= 320) || (x >= 520 && x <= 640))):
@@ -13,12 +14,12 @@ for (var x = 0; x <= 800; x += 40) {
             case ((y === 600) && (x === 280 || x === 560)):
             case ((y === 640) && (x === 320 || x === 520)):
             case ((y === 680) && (x === 360 || x === 480)):
-                var p = new PixelNumber(x, y, "black", 14);
+                let p = new CheckablePixel(x, y, "black", 14, "black");
                 rainbowHeartArray.push(p);
                 break;
             default:
-                var p = new PixelNumber(x, y, "whitesmoke", 13);
-                rainbowHeartArray.push(p);
+                let px = new CheckablePixel(x, y, "whitesmoke", 13, "whitesmoke");
+                rainbowHeartArray.push(px);
                 break;
         }
     }
