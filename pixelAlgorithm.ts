@@ -82,15 +82,20 @@ class CheckablePixel extends PixelNumber {
         this.correctColor = correctColor;
     }
 
-    checkColor() {
+    makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number) {
         if (this.color === this.correctColor) {
-            this.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1);
+            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc)
         } else {
-            super.changeColor("white")
-            super.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1)
-            super.changeColor(this.color)
-            ctx.fillStyle = "black"
-            ctx.fillText(`X${this.num}X`, this.xCoordinate - 35, this.yCoordinate - 15);
+            ctx.fillStyle = 'black';
+            ctx.fillText(`${this.num} X`, this.xCoordinate - 23, this.yCoordinate - 15);
         }
     }
+    // checkColor() {
+    //     if (this.color === this.correctColor) {
+    //         this.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1);
+    //     } else {
+    //         
+    //     }
+    // }
 }
+

@@ -1,7 +1,8 @@
-var rainbowHeartArray = [];
-var checkRainbowHeart = [];
-for (var x = 0; x <= 800; x += 40) {
-    for (var y = 0; y <= 800; y += 40) {
+"use strict";
+let rainbowHeartArray = [];
+let freeplayArray = [];
+for (let x = 0; x <= 800; x += 40) {
+    for (let y = 0; y <= 800; y += 40) {
         switch (true) {
             case ((x === 120) && (y >= 280 && y <= 440)):
             case ((y === 200) && ((x >= 200 && x <= 320) || (x >= 520 && x <= 640))):
@@ -223,3 +224,9 @@ for (var x = 0; x <= 800; x += 40) {
     }
 }
 console.log(rainbowHeartArray);
+for (let x = 0; x <= 800; x += 40) {
+    for (let y = 0; y <= 800; y += 40) {
+        let p = new Pixel(x, y, "black");
+        freeplayArray.push(p);
+    }
+}

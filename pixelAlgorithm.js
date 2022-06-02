@@ -85,9 +85,15 @@ var CheckablePixel = /** @class */ (function (_super) {
         _this.correctColor = correctColor;
         return _this;
     }
-    CheckablePixel.prototype.checkColor = function () {
+}
+class CheckablePixel extends PixelNumber {
+    constructor(xCoordinate, yCoordinate, color, num, correctColor) {
+        super(xCoordinate, yCoordinate, color, num);
+        this.correctColor = correctColor;
+    }
+    makeOrColorGrid(xMin, yMin, xMax, yMax, inc) {
         if (this.color === this.correctColor) {
-            this.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1);
+            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
         }
         else {
             _super.prototype.changeColor.call(this, "white");
