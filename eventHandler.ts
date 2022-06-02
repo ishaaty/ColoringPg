@@ -1,7 +1,8 @@
+let currentColor = document.querySelector("#currentColor") as HTMLParagraphElement;
+let clearBtn = document.querySelector("#clear") as HTMLButtonElement;
 let cor = sessionStorage.getItem("first") as string;
 let color = "black";
 let pixelsList = [];
-let currentColor = document.querySelector("#currentColor") as HTMLParagraphElement;
 let selectedArray = [];
 if (cor === "freeplay") {
     selectedArray = freeplayArray;
@@ -70,3 +71,19 @@ canvas.addEventListener("click", function (event : MouseEvent){
     }
 });
 // });
+
+clearBtn.addEventListener("click", function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //repetitive, make it a function
+    let pixelGrid : Pixel = pixelsList[0]; // contains coordinates (0,0)
+    pixelGrid.changeColor("black");
+    pixelGrid.makeOrColorGrid(0, 0, canvas.width, canvas.height, 40);
+
+    // filling the grid with white squares
+    for (const r of selectedArray){
+        if (r.constructor.name === "CheckablePixel") {
+            r.insertNum(r.xCoordinate, r.yCoordinate, r.num);
+        }
+    }
+
+})

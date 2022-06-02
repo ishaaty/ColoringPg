@@ -15,7 +15,7 @@ canvas {
     right: 0;
 }
 
-.colorBtn {
+button {
     display : grid;
     grid-column : 1;
     margin : 10px;
