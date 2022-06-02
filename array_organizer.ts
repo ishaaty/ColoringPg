@@ -7,11 +7,11 @@ var correct : string = "";
 freeplayBtn.addEventListener("click", function() {
     correct = "freeplay";
     sessionStorage.setItem("first", correct);
-    location.href = "./index.html";
+    location.href = "./screen.html";
 })
 
 rainbowHeartBtn.addEventListener("click", function() {
     correct = "rainbowHeart";
     sessionStorage.setItem("first", correct);
-    location.href = "./index.html";
+    location.href = "./screen.html";
 })
