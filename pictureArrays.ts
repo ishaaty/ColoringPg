@@ -168,54 +168,6 @@ for(let x = 0; x <= 800; x += 40){
                 let pk : CheckablePixel = new CheckablePixel(x, y, "purple", 9, "purple");
                 rainbowHeartArray.push(pk);
                 break;
-            // case((x === 480) && (y === 320)):
-            // case((x === 520) && (y === 360)):
-            // case((x === 600) && (y === 440)):
-            // case((x === 640) && (y === 480)):
-                // let pl : CheckablePixel = new CheckablePixel(x, y, "rgb(238, 89, 114)", 10, "rgb(238, 89, 114)");
-                // rainbowHeartArray.push(pl);
-                // break;
-            // // case((x === 480) && (y === 280)):
-            // // case((x === 520) && (y === 320)):
-            // // case((x === 600) && (y === 400)):
-            // // case((x === 640) && (y === 440)):
-            //     let pm : CheckablePixel = new CheckablePixel(x, y, "red", 0, "red");
-            //     rainbowHeartArray.push(pm);
-            //     break;
-            // case((x === 520) && (y === 280)):
-            // case((x === 560) && (y === 320)):
-            // case((x === 600) && (y === 360)):
-            // case((x === 640) && (y === 400)):
-            // case((x === 680) && (y === 440)):
-            //     let pn : CheckablePixel = new CheckablePixel(x, y, "orangered", 1, "orangered");
-            //     rainbowHeartArray.push(pn);
-            //     break;
-            // case((x === 520) && (y === 240)):
-            // case((x === 560) && (y === 280)):
-            // case((x === 600) && (y === 320)):
-            // case((x === 640) && (y === 360)):
-            // case((x === 680) && (y === 400)):
-            //     let po : CheckablePixel = new CheckablePixel(x, y, "orange", 2, "orange");
-            //     rainbowHeartArray.push(po);
-            //     break;
-            // case((x === 680) && (y === 360)):
-            // case((x === 640) && (y === 320)):
-            // case((x === 600) && (y === 280)):
-            // case((x === 560) && (y === 240)):
-            //     let pp : CheckablePixel = new CheckablePixel(x, y, "yellow", 3, "yellow");
-            //     rainbowHeartArray.push(pp);
-            //     break;
-            // case((x === 600) && (y === 240)):
-            // case((x === 640) && (y === 280)):
-            // case((x === 680) && (y === 320)):
-            //     let pq : CheckablePixel = new CheckablePixel(x, y, "yellowgreen", 4, "yellowgreen");
-            //     rainbowHeartArray.push(pq);
-            //     break;
-            // case((x === 640) && (y === 240)):
-            // case((x === 680) && (y === 280)):
-            //     let pr : CheckablePixel = new CheckablePixel(x, y, "green", 5, "green");
-            //     rainbowHeartArray.push(pr);
-            //     break;
             default:
                 let px : CheckablePixel = new CheckablePixel(x, y, "grey", 11, "grey");
                 rainbowHeartArray.push(px);
