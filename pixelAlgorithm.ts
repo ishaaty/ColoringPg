@@ -32,9 +32,9 @@ class Pixel {
         this.color = color;
     }
 
-    fill(x : number = 0, y : number = 0) : void {
+    fill(x : number = 0, y : number = 0, color? : string) : void {
         ctx.beginPath();
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = color || this.color;
         ctx.arc(x, y, 1, 0, Math.PI*2);
         ctx.fill();
         ctx.closePath();
