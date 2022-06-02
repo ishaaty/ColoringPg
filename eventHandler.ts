@@ -1,4 +1,4 @@
-let color = "black";
+let color = "whitesmoke";
 let pixelsList = [];
 let currentColor = document.querySelector("#currentColor") as HTMLParagraphElement;
 
@@ -35,6 +35,7 @@ window.addEventListener("load", function () {
     for (const r of rainbowHeartArray){
         r.insertNum(r.xCoordinate, r.yCoordinate, r.num);
     }
+
 });
 
 
@@ -61,7 +62,8 @@ document.querySelectorAll<HTMLElement>(".colorBtn").forEach(function(elm){
 
 
 // coloring in a pixel when user clicks
-canvas.addEventListener("click", function (event : MouseEvent){
+// canvas.addEventListener("click", function (event : MouseEvent){
+canvas.addEventListener("dragover", function (event : DragEvent){
     for (const p of rainbowHeartArray){
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
             console.log(`${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
@@ -69,3 +71,4 @@ canvas.addEventListener("click", function (event : MouseEvent){
         }
     }
 });
+// });

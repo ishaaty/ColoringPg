@@ -69,7 +69,7 @@ class PixelNumber extends Pixel {
     insertNum (x : number, y : number, num : number){
         ctx.font = "15px Calibri";
         ctx.fillStyle = "black";
-        ctx.fillText(`${num}`, x - 23, y - 15);
+        ctx.fillText(`${num}`, x - 20, y - 20);
     }
 
 }
@@ -88,9 +88,9 @@ class CheckablePixel extends PixelNumber {
         } else {
             super.changeColor("white")
             super.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1)
+            super.changeColor(this.color)
             ctx.fillStyle = "black"
-            ctx.fillText(`${this.num}X`, this.xCoordinate - 23, this.yCoordinate - 15);
-            ctx.fillStyle = this.color;
+            ctx.fillText(`X${this.num}X`, this.xCoordinate - 35, this.yCoordinate - 15);
         }
     }
 }

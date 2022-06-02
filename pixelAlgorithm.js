@@ -74,7 +74,7 @@ var PixelNumber = /** @class */ (function (_super) {
     PixelNumber.prototype.insertNum = function (x, y, num) {
         ctx.font = "15px Calibri";
         ctx.fillStyle = "black";
-        ctx.fillText("".concat(num), x - 23, y - 15);
+        ctx.fillText("".concat(num), x - 20, y - 20);
     };
     return PixelNumber;
 }(Pixel));
@@ -92,9 +92,9 @@ var CheckablePixel = /** @class */ (function (_super) {
         else {
             _super.prototype.changeColor.call(this, "white");
             _super.prototype.makeOrColorGrid.call(this, this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1);
+            _super.prototype.changeColor.call(this, this.color);
             ctx.fillStyle = "black";
-            ctx.fillText("".concat(this.num, "X"), this.xCoordinate - 23, this.yCoordinate - 15);
-            ctx.fillStyle = this.color;
+            ctx.fillText("X".concat(this.num, "X"), this.xCoordinate - 35, this.yCoordinate - 15);
         }
     };
     return CheckablePixel;
