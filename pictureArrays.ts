@@ -1,6 +1,5 @@
 let rainbowHeartArray = [];
-
-let checkRainbowHeart = [];
+let freeplayArray = [];
 
 for(let x = 0; x <= 800; x += 40){
     for (let y = 0; y <= 800; y += 40){
@@ -28,3 +27,10 @@ for(let x = 0; x <= 800; x += 40){
 }
 
 console.log(rainbowHeartArray);
+
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        let p : Pixel = new Pixel(x, y, "black");
+        freeplayArray.push(p);
+        }
+    }

@@ -1,0 +1,45 @@
+html {
+    background-color: rgb(228, 178, 161);
+    font-family : "Pangolin";
+}
+
+body {
+    height : 800px;
+    width : 1300px;
+    padding : 20px 10px;
+    background-color: white;
+    border-style:dashed;
+    border-color: rgb(230, 148, 121);
+    margin: auto;
+}
+
+h1, p {
+    display : block;
+    text-align: center;
+}
+
+.options {
+    display : grid;
+    grid-template-columns: auto auto;
+    text-align : center;
+}
+
+button {
+    width : 100px;
+    height : 100px;
+    margin : auto;
+    background-color:rgb(228, 178, 161);
+    border-color : rgb(230, 148, 121);
+}
+
+button:hover {
+    border-color : rgb(154, 96, 77);
+}
+
+p {
+    font-size : 24px;
+}
+
+h1 {
+    font-size : 40px;
+}

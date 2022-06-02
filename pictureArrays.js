@@ -1,5 +1,6 @@
 "use strict";
 let rainbowHeartArray = [];
+let freeplayArray = [];
 for (let x = 0; x <= 800; x += 40) {
     for (let y = 0; y <= 800; y += 40) {
         switch (true) {
@@ -25,3 +26,9 @@ for (let x = 0; x <= 800; x += 40) {
     }
 }
 console.log(rainbowHeartArray);
+for (let x = 0; x <= 800; x += 40) {
+    for (let y = 0; y <= 800; y += 40) {
+        let p = new Pixel(x, y, "black");
+        freeplayArray.push(p);
+    }
+}
