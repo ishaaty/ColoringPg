@@ -1,4 +1,4 @@
-var color = "black";
+var color = "whitesmoke";
 var pixelsList = [];
 var currentColor = document.querySelector("#currentColor");
 // filling pairsList
@@ -52,7 +52,8 @@ document.querySelectorAll(".colorBtn").forEach(function (elm) {
 //     }
 // });
 // coloring in a pixel when user clicks
-canvas.addEventListener("click", function (event) {
+// canvas.addEventListener("click", function (event : MouseEvent){
+canvas.addEventListener("dragover", function (event) {
     for (var _i = 0, rainbowHeartArray_3 = rainbowHeartArray; _i < rainbowHeartArray_3.length; _i++) {
         var p = rainbowHeartArray_3[_i];
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)) {
@@ -61,3 +62,4 @@ canvas.addEventListener("click", function (event) {
         }
     }
 });
+// });
