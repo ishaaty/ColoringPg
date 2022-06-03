@@ -40,18 +40,18 @@ class Pixel {
         ctx.closePath();
     }
 
-    makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number) {
+    makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number, color : string) {
         // making vertical lines
         for (let xUpdate = xMin; xUpdate < xMax; xUpdate += inc){
             for (let yUpdate = yMin; yUpdate < yMax; yUpdate++){
-                this.fill(xUpdate, yUpdate);
+                this.fill(xUpdate, yUpdate, color);
             }
         }
 
         // making horizontal lines
         for (let yUpdate = yMin; yUpdate < yMax; yUpdate += inc){ 
             for (let xUpdate = xMin; xUpdate < xMax; xUpdate++){
-                this.fill(xUpdate, yUpdate);
+                this.fill(xUpdate, yUpdate, color);
             }
         }
     }
@@ -84,10 +84,11 @@ class CheckablePixel extends PixelNumber {
 
     makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number) {
         if (this.color === this.correctColor) {
-            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc)
+            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc, this.color)
         } else {
-            ctx.fillStyle = 'black';
-            ctx.fillText(`${this.num} X`, this.xCoordinate - 23, this.yCoordinate - 15);
+            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc, "white")
+            ctx.fillStyle = "black";
+            ctx.fillText(`X${this.num}X`, this.xCoordinate - 23, this.yCoordinate - 15);
         }
     }
     // checkColor() {
