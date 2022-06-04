@@ -31,7 +31,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 520) && (y === 360)):
             case((x === 600) && (y === 440)):
             case((x === 640) && (y === 480)):
-                let pb : CheckablePixel = new CheckablePixel(x, y, "rgb(238, 89, 114)", 10, "rgb(238, 89, 114)");
+                let pb : CheckablePixel = new CheckablePixel(x, y, "black", 10, "rgb(238, 89, 114)");
                 rainbowHeartArray.push(pb);
                 break;
             case((x === 160) && (y === 400)):
@@ -46,7 +46,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 520) && (y === 320)):
             case((x === 600) && (y === 400)):
             case((x === 640) && (y === 440)):
-                let pc : CheckablePixel = new CheckablePixel(x, y, "red", 0, "red");
+                let pc : CheckablePixel = new CheckablePixel(x, y, "black", 0, "red");
                 rainbowHeartArray.push(pc);
                 break;
             case((x === 160) && (y === 360)):
@@ -62,7 +62,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 600) && (y === 360)):
             case((x === 640) && (y === 400)):
             case((x === 680) && (y === 440)):
-                let pd : CheckablePixel = new CheckablePixel(x, y, "orangered", 1, "orangered");
+                let pd : CheckablePixel = new CheckablePixel(x, y, "black", 1, "orangered");
                 rainbowHeartArray.push(pd);
                 break;
             case((x === 160) && (y === 320)):
@@ -79,7 +79,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 600) && (y === 320)):
             case((x === 640) && (y === 360)):
             case((x === 680) && (y === 400)):
-                let pe : CheckablePixel = new CheckablePixel(x, y, "orange", 2, "orange");
+                let pe : CheckablePixel = new CheckablePixel(x, y, "black", 2, "orange");
                 rainbowHeartArray.push(pe);
                 break;
             case((x === 160) && (y === 280)):
@@ -95,7 +95,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 640) && (y === 320)):
             case((x === 600) && (y === 280)):
             case((x === 560) && (y === 240)):
-                let pf : CheckablePixel = new CheckablePixel(x, y, "yellow", 3, "yellow");
+                let pf : CheckablePixel = new CheckablePixel(x, y, "black", 3, "yellow");
                 rainbowHeartArray.push(pf);
                 break;
             case((x === 200) && (y === 280)):
@@ -110,7 +110,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 600) && (y === 240)):
             case((x === 640) && (y === 280)):
             case((x === 680) && (y === 320)):
-                let pg : CheckablePixel = new CheckablePixel(x, y, "yellowgreen", 4, "yellowgreen");
+                let pg : CheckablePixel = new CheckablePixel(x, y, "black", 4, "yellowgreen");
                 rainbowHeartArray.push(pg);
                 break;
             case((x === 200) && (y === 240)):
@@ -124,7 +124,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 520) && (y === 560)):
             case((x === 640) && (y === 240)):
             case((x === 680) && (y === 280)):
-                let p : CheckablePixel = new CheckablePixel(x, y, "green", 5, "green");
+                let p : CheckablePixel = new CheckablePixel(x, y, "black", 5, "green");
                 rainbowHeartArray.push(p);
                 break;
             case((x === 240) && (y === 240)):
@@ -136,7 +136,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 480) && (y === 480)):
             case((x === 520) && (y === 520)):
             case((x === 560) && (y === 560)):
-                let ph : CheckablePixel = new CheckablePixel(x, y, "rgb(66, 175, 212)", 6, "rgb(66, 175, 212)");
+                let ph : CheckablePixel = new CheckablePixel(x, y, "black", 6, "rgb(66, 175, 212)");
                 rainbowHeartArray.push(ph);
                 break;
             case((x === 280) && (y === 240)):
@@ -147,7 +147,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 480) && (y === 440)):
             case((x === 520) && (y === 480)):
             case((x === 560) && (y === 520)):
-                let pi : CheckablePixel = new CheckablePixel(x, y, "rgb(32, 32, 205)", 7, "rgb(32, 32, 205)");
+                let pi : CheckablePixel = new CheckablePixel(x, y, "black", 7, "rgb(32, 32, 205)");
                 rainbowHeartArray.push(pi);
                 break;
             case((x === 320) && (y === 240)):
@@ -158,18 +158,18 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 520) && (y === 440)):
             case((x === 560) && (y === 480)):
             case((x === 600) && (y === 520)):
-                let pj : CheckablePixel = new CheckablePixel(x, y, "blueviolet", 8, "blueviolet");
+                let pj : CheckablePixel = new CheckablePixel(x, y, "black", 8, "blueviolet");
                 rainbowHeartArray.push(pj);
                 break;
             case((x === 440) && (y === 320)):
             case((x === 480) && (y === 360)):
             case((x === 560) && (y === 440)):
             case((x === 600) && (y === 480)):
-                let pk : CheckablePixel = new CheckablePixel(x, y, "purple", 9, "purple");
+                let pk : CheckablePixel = new CheckablePixel(x, y, "black", 9, "purple");
                 rainbowHeartArray.push(pk);
                 break;
             default:
-                let px : CheckablePixel = new CheckablePixel(x, y, "grey", 11, "grey");
+                let px : CheckablePixel = new CheckablePixel(x, y, "black", 11, "grey");
                 rainbowHeartArray.push(px);
                 break;
         }
