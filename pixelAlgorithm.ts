@@ -25,33 +25,33 @@ class Pixel {
     constructor (xCoordinate : number, yCoordinate : number, color? : string){
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
-        this.color = color || "white";
+        this.color = color || "black";
     }
 
     changeColor(color : string){
         this.color = color;
     }
 
-    fill(x : number = 0, y : number = 0, color? : string) : void {
+    fill(x : number = 0, y : number = 0) : void {
         ctx.beginPath();
-        ctx.fillStyle = color || this.color;
+        ctx.fillStyle = this.color;
         ctx.arc(x, y, 1, 0, Math.PI*2);
         ctx.fill();
         ctx.closePath();
     }
 
-    makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number, color : string) {
+    makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number) {
         // making vertical lines
         for (let xUpdate = xMin; xUpdate < xMax; xUpdate += inc){
             for (let yUpdate = yMin; yUpdate < yMax; yUpdate++){
-                this.fill(xUpdate, yUpdate, color);
+                this.fill(xUpdate, yUpdate);
             }
         }
 
         // making horizontal lines
         for (let yUpdate = yMin; yUpdate < yMax; yUpdate += inc){ 
             for (let xUpdate = xMin; xUpdate < xMax; xUpdate++){
-                this.fill(xUpdate, yUpdate, color);
+                this.fill(xUpdate, yUpdate);
             }
         }
     }
@@ -61,15 +61,15 @@ class Pixel {
 class PixelNumber extends Pixel {
     num : number;
 
-    constructor(xCoordinate : number, yCoordinate : number, color: string, num : number){
-        super(xCoordinate, yCoordinate, color);
+    constructor(xCoordinate : number, yCoordinate : number, userColor: string, num : number){
+        super(xCoordinate, yCoordinate, userColor);
         this.num = num;
     }
 
     insertNum (x : number, y : number, num : number){
         ctx.font = "15px Calibri";
         ctx.fillStyle = "black";
-        ctx.fillText(`${num}`, x - 20, y - 20);
+        ctx.fillText(`${num}`, x - 23, y - 20);
     }
 
 }
@@ -84,19 +84,13 @@ class CheckablePixel extends PixelNumber {
 
     makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number) {
         if (this.color === this.correctColor) {
-            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc, this.color)
+            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
         } else {
-            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc, "white")
+            super.changeColor("white")
+            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
             ctx.fillStyle = "black";
-            ctx.fillText(`X${this.num}X`, this.xCoordinate - 23, this.yCoordinate - 15);
+            ctx.fillText(`X${this.num}X`, this.xCoordinate - 32, this.yCoordinate - 15);
         }
     }
-    // checkColor() {
-    //     if (this.color === this.correctColor) {
-    //         this.makeOrColorGrid(this.xCoordinate - 38, this.yCoordinate - 38, this.xCoordinate - 1, this.yCoordinate - 1, 1);
-    //     } else {
-    //         
-    //     }
-    // }
-}
 
+}
