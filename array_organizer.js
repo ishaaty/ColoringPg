@@ -11,7 +11,7 @@ let freeplayBtn = document.querySelector("#freeplay");
 let rainbowHeartBtn = document.querySelector("#rainbowHeart");
 let okBtn = document.querySelector("#ok");
 let randBtn = document.querySelector("#surprise");
-let options = ["freeplay", "rainbowHeart", "ok"];
+let options = ["rainbowHeart", "ok"];
 freeplayBtn.addEventListener("click", function () {
     addToStorage("freeplay");
 });
