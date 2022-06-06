@@ -54,6 +54,7 @@ canvas.addEventListener("click", function (event) {
         }
     }
 });
+// uncolors pixel
 canvas.addEventListener("dblclick", function (event) {
     for (const p of selectedArray) {
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)) {

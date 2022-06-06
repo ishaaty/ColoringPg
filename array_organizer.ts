@@ -29,7 +29,7 @@ okBtn.addEventListener("click", function (){
 })
 
 randBtn.addEventListener("click", function() {
-    addToStorage(options[Math.floor(Math.random() * 1)]);
+    addToStorage(options[Math.floor(Math.random() * 2)]);
 })
 
 function addToStorage(correct : string) : void{
