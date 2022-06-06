@@ -60,6 +60,19 @@ canvas.addEventListener("click", function(event : MouseEvent){
     }
 });
 
+// uncolors pixel
+canvas.addEventListener("dblclick", function(event : MouseEvent){
+    for (const p of selectedArray){
+        if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
+            console.log(`Unclicked ${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
+            p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1, "white");
+            if (p.constructor.name === "CheckablePixel"){
+                p.insertNum(p.xCoordinate, p.yCoordinate, p.num);
+            }
+        }
+    }
+})
+
 clearBtn.addEventListener("click", function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //repetitive, make it a function

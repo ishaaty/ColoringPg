@@ -25,24 +25,34 @@ class Pixel {
     changeColor(color) {
         this.color = color;
     }
-    fill(x = 0, y = 0) {
+    fill(x = 0, y = 0, color) {
         ctx.beginPath();
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = color || this.color;
         ctx.arc(x, y, 1, 0, Math.PI * 2);
         ctx.fill();
         ctx.closePath();
     }
-    makeOrColorGrid(xMin, yMin, xMax, yMax, inc) {
+    makeOrColorGrid(xMin, yMin, xMax, yMax, inc, color) {
         // making vertical lines
         for (let xUpdate = xMin; xUpdate < xMax; xUpdate += inc) {
             for (let yUpdate = yMin; yUpdate < yMax; yUpdate++) {
-                this.fill(xUpdate, yUpdate);
+                if (!color) {
+                    this.fill(xUpdate, yUpdate);
+                }
+                else {
+                    this.fill(xUpdate, yUpdate, color);
+                }
             }
         }
         // making horizontal lines
         for (let yUpdate = yMin; yUpdate < yMax; yUpdate += inc) {
             for (let xUpdate = xMin; xUpdate < xMax; xUpdate++) {
-                this.fill(xUpdate, yUpdate);
+                if (!color) {
+                    this.fill(xUpdate, yUpdate);
+                }
+                else {
+                    this.fill(xUpdate, yUpdate, color);
+                }
             }
         }
     }
