@@ -32,30 +32,37 @@ class Pixel {
         this.color = color;
     }
 
-    fill(x : number = 0, y : number = 0) : void {
+    fill(x : number = 0, y : number = 0, color? : string) : void {
         ctx.beginPath();
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = color || this.color;
         ctx.arc(x, y, 1, 0, Math.PI*2);
         ctx.fill();
         ctx.closePath();
     }
 
-    makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number) {
+    makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number, color? : string) {
         // making vertical lines
         for (let xUpdate = xMin; xUpdate < xMax; xUpdate += inc){
             for (let yUpdate = yMin; yUpdate < yMax; yUpdate++){
-                this.fill(xUpdate, yUpdate);
+                if (!color){
+                    this.fill(xUpdate, yUpdate);
+                } else {
+                    this.fill(xUpdate, yUpdate, color);
+                }
             }
         }
 
         // making horizontal lines
         for (let yUpdate = yMin; yUpdate < yMax; yUpdate += inc){ 
             for (let xUpdate = xMin; xUpdate < xMax; xUpdate++){
-                this.fill(xUpdate, yUpdate);
+                if (!color){
+                    this.fill(xUpdate, yUpdate);
+                } else {
+                    this.fill(xUpdate, yUpdate, color);
+                }
             }
         }
-    }
-    
+    }   
 }
 
 class PixelNumber extends Pixel {
