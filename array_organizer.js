@@ -10,16 +10,21 @@
 let freeplayBtn = document.querySelector("#freeplay");
 let rainbowHeartBtn = document.querySelector("#rainbowHeart");
 let okBtn = document.querySelector("#ok");
+let randBtn = document.querySelector("#surprise");
+let options = ["freeplay", "rainbowHeart", "ok"];
 freeplayBtn.addEventListener("click", function () {
-    idk("freeplay");
+    addToStorage("freeplay");
 });
 rainbowHeartBtn.addEventListener("click", function () {
-    idk("rainbowHeart");
+    addToStorage("rainbowHeart");
 });
 okBtn.addEventListener("click", function () {
-    idk("ok");
+    addToStorage("ok");
 });
-function idk(correct) {
+randBtn.addEventListener("click", function () {
+    addToStorage(options[Math.floor(Math.random() * 2)]);
+});
+function addToStorage(correct) {
     sessionStorage.setItem("first", correct);
     location.href = "./screen.html";
 }

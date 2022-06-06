@@ -13,20 +13,26 @@
 let freeplayBtn = document.querySelector("#freeplay") as HTMLButtonElement;
 let rainbowHeartBtn = document.querySelector("#rainbowHeart") as HTMLButtonElement;
 let okBtn = document.querySelector("#ok") as HTMLButtonElement;
+let randBtn = document.querySelector("#surprise") as HTMLButtonElement;
+let options : string[] = ["rainbowHeart", "ok"];
 
 freeplayBtn.addEventListener("click", function() {
-    idk("freeplay");
+    addToStorage("freeplay");
 })
 
 rainbowHeartBtn.addEventListener("click", function() {
-    idk("rainbowHeart");
+    addToStorage("rainbowHeart");
 })
 
 okBtn.addEventListener("click", function (){
-    idk("ok");
+    addToStorage("ok");
 })
 
-function idk(correct : string) : void{
+randBtn.addEventListener("click", function() {
+    addToStorage(options[Math.floor(Math.random() * 1)]);
+})
+
+function addToStorage(correct : string) : void{
     sessionStorage.setItem("first", correct);
     location.href = "./screen.html";
 }
