@@ -77,7 +77,7 @@ class PixelNumber extends Pixel {
 class CheckablePixel extends PixelNumber {
     correctColor : string;
 
-    constructor(xCoordinate : number, yCoordinate : number, color: string, num : number, correctColor : string) {
+    constructor(xCoordinate : number, yCoordinate : number, color: string = "black", num : number, correctColor : string) {
         super(xCoordinate, yCoordinate, color, num);
         this.correctColor = correctColor;
     }

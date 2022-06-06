@@ -59,11 +59,11 @@ class PixelNumber extends Pixel {
     }
 }
 class CheckablePixel extends PixelNumber {
-    constructor(xCoordinate, yCoordinate, color, num, correctColor) {
+    constructor(xCoordinate, yCoordinate, color = "black", num, correctColor) {
         super(xCoordinate, yCoordinate, color, num);
         this.correctColor = correctColor;
     }
-    makeOrCOlorGrid(xMin, yMin, xMax, yMax, inc) {
+    makeOrColorGrid(xMin, yMin, xMax, yMax, inc) {
         if (this.color === this.correctColor) {
             super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
         }

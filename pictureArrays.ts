@@ -1,6 +1,8 @@
 let rainbowHeartArray = [];
 let freeplayArray = [];
+let okArray = [];
 
+// rainbowHeartArray coordinates
 for(let x = 0; x <= 800; x += 40){
     for (let y = 0; y <= 800; y += 40){
         switch(true){
@@ -180,7 +182,72 @@ console.log(rainbowHeartArray);
 
 for(let x = 0; x <= 800; x += 40){
     for (let y = 0; y <= 800; y += 40){
-        let p : Pixel = new Pixel(x, y, "black");
-        freeplayArray.push(p);
+        switch(true){
+            case(x === 720 && (y >= 520 && y <= 800)):
+            case(x === 680 && ((y >= 360 && y <= 440) || (y >= 520 && y <= 800))):
+            case(x === 640 && (y != 400 && (y >= 360 && y <= 800))):
+            case(x === 600 && ((y >= 360 && y <= 440) || (y >= 520 && y <= 800))):
+            case(x === 560 && (y >= 520 && y <= 800)):
+                let xa : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
+                okArray.push(xa);
+                break;
+            case(x === 560 && (y >= 360 && y <= 480)):
+            case(x === 520 && ((y >= 360 && y <= 440) || (y >= 520 && y <= 800))):
+            case(x === 480 && (y >= 520 && y <= 800)):
+                let xb : CheckablePixel = new CheckablePixel(x, y, "black", 0, "red");
+                okArray.push(xb);
+                break;
+            case(x === 480 && (y >= 360 && y <= 480)):
+            case(x === 440 && ((y >= 360 && y <= 440) || (y >= 520 && y <= 800))):
+            case(x === 400 && (y >= 520 && y <= 800)):
+                let xc : CheckablePixel = new CheckablePixel(x, y, "black", 2, "orange");
+                okArray.push(xc);
+                break;
+            case(x === 400 && (y >= 360 && y <= 480)):
+            case(x === 360 && ((y >= 360 && y <= 440) || (y >= 520 && y <= 800))):
+            case(x === 320 && (y >= 520 && y <= 800)):
+                let xd : CheckablePixel = new CheckablePixel(x, y, "black", 3, "yellow");
+                okArray.push(xd);
+                break;
+            case(x === 320 && (y >= 360 && y <= 480)):
+            case(x === 280 && ((y >= 360 && y <= 440) || (y >= 520 && y <= 800))):
+            case(x === 240 && (y >= 520 && y <= 800)):
+                let xe : CheckablePixel = new CheckablePixel(x, y, "black", 5, "green");
+                okArray.push(xe);
+                break;
+            case(x === 240 && (y >= 360 && y <= 480)):
+            case(x === 200 && ((y >= 360 && y <= 440) || (y >= 520 && y <= 800))):
+            case(x === 160 && (y >= 520 && y <= 800)):
+                let xf : CheckablePixel = new CheckablePixel(x, y, "black", 7, "rgb(32, 32, 205)");
+                okArray.push(xf);
+                break;
+            case(x === 280 && (y >= 120 && y <= 240)):
+            case(x === 320 && (y === 120 || y === 240)):
+            case(x === 360 && (y >= 120 && y <= 240)):
+            case(x === 440 && (y >= 120 && y <= 240)):
+            case(x === 480 && y === 160):
+            case(x === 520 && (y === 120 || y >= 200 && y <= 240)):
+            case(x === 600 && y === 240):
+            case(x === 80 && (y >= 40 && y <= 800)):
+                let xg : CheckablePixel = new CheckablePixel(x, y, "black", 10, "rgb(238, 89, 114)");
+                okArray.push(xg);
+                break;
+            case(x === 640 && y === 400):
+                let xh : CheckablePixel = new CheckablePixel(x, y, "black", 13, "whitesmoke");
+                okArray.push(xh);
+                break;
+            default:
+                let xi : CheckablePixel = new CheckablePixel(x, y, "black", 8, "blueviolet");
+                okArray.push(xi);
+                break;
         }
     }
+}
+
+
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        let p : Pixel = new Pixel(x, y, "black");
+        freeplayArray.push(p);
+    }
+}
