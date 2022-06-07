@@ -4,6 +4,7 @@
 let freeplayBtn = document.querySelector("#freeplay");
 let randBtn = document.querySelector("#surprise");
 let options = [];
+let helloWorldBtn = document.querySelector("#helloWorld");
 document.querySelectorAll(".pgSelection").forEach(function (elm) {
     options.push(elm.dataset.key);
     elm.addEventListener("click", function (event) {
@@ -17,6 +18,9 @@ randBtn.addEventListener("click", function () {
 });
 freeplayBtn.addEventListener("click", function () {
     addToStorage("freeplay");
+});
+helloWorldBtn.addEventListener("click", function () {
+    addToStorage("helloWorld");
 });
 function addToStorage(correct) {
     sessionStorage.setItem("first", correct);

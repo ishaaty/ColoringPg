@@ -16,6 +16,10 @@ if (cor === "rainbowHeart") {
 if (cor === "ok"){
     selectedArray = okArray;
 }
+if (cor === "helloWorld") {
+    selectedArray = helloWorldArray;
+    console.log(helloWorldArray);
+}
 
 // filling pixelsList for freeplay screen
 for(let x = 0; x <= canvas.height; x += 40){

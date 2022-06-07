@@ -3,6 +3,8 @@
 let freeplayBtn = document.querySelector("#freeplay") as HTMLButtonElement;
 let randBtn = document.querySelector("#surprise") as HTMLButtonElement;
 let options : string[] = [];
+let helloWorldBtn = document.querySelector("#helloWorld") as HTMLButtonElement;
+
 
 document.querySelectorAll<HTMLElement>(".pgSelection").forEach(function(elm){
     options.push(elm.dataset.key)
@@ -22,7 +24,12 @@ freeplayBtn.addEventListener("click", function() {
     addToStorage("freeplay");
 })
 
-function addToStorage(correct) : void{
+
+helloWorldBtn.addEventListener("click", function() {
+    addToStorage("helloWorld");
+})
+
+function addToStorage(correct : string) : void{
     sessionStorage.setItem("first", correct);
     location.href = "./screen.html";
     console.log(options)

@@ -1,6 +1,7 @@
 let rainbowHeartArray = [];
 let freeplayArray = [];
 let okArray = [];
+let helloWorldArray = [];
 
 // rainbowHeartArray coordinates
 for(let x = 0; x <= 800; x += 40){
@@ -239,6 +240,38 @@ for(let x = 0; x <= 800; x += 40){
             default:
                 let xi : CheckablePixel = new CheckablePixel(x, y, "black", 8, "blueviolet");
                 okArray.push(xi);
+                break;
+        }
+    }
+}
+
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        switch(true){
+            case((x === 80 || x === 160 || x === 360 || x === 440) && ((y >= 120 && y<= 280))):
+            case((x === 120) && (y === 200 || y === 520)):
+            case((x === 280 || x === 240) && ((y >= 160 && y <= 200) || y === 280)):
+            case(x === 520) && ((y >= 200 && y <= 280)):
+            case(x === 600) && ((y >= 200 && y <= 280) || (y >= 480 && y <= 520)):
+            case((x === 560) && (y === 200 || y === 280)):
+            case((x === 160 || x === 720) && (y >= 360 && y <= 480)):
+            case((x === 200 || x === 720) && (y === 520)):
+            case((x === 240 ) && (y >= 360 && y <= 480)):
+            case(x === 600) && (y >= 360 && y <= 520):
+            case((x === 680) && (y >= 480 && y <= 520)):
+            case((x === 240) && (y === 240)):
+            case((x === 80) && (y >= 360 && y <= 480)):
+            case((x === 320 || x === 400 || x === 480) && (y >= 440 && y <= 520)):
+            case((x === 360) && (y === 440 || y === 520)):
+            case((x === 520) && (y === 440)):
+            case((x >= 80 && x <= 760) && (y === 600)):
+            // || 320
+                let xa : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
+                helloWorldArray.push(xa);
+                break;
+            default:
+                let xi : CheckablePixel = new CheckablePixel(x, y, "black", 5, "green");
+                helloWorldArray.push(xi);
                 break;
         }
     }
