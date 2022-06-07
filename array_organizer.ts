@@ -14,6 +14,7 @@ let freeplayBtn = document.querySelector("#freeplay") as HTMLButtonElement;
 let rainbowHeartBtn = document.querySelector("#rainbowHeart") as HTMLButtonElement;
 let okBtn = document.querySelector("#ok") as HTMLButtonElement;
 let randBtn = document.querySelector("#surprise") as HTMLButtonElement;
+let helloWorldBtn = document.querySelector("#helloWorld") as HTMLButtonElement;
 let options : string[] = ["rainbowHeart", "ok"];
 
 freeplayBtn.addEventListener("click", function() {
@@ -30,6 +31,10 @@ okBtn.addEventListener("click", function (){
 
 randBtn.addEventListener("click", function() {
     addToStorage(options[Math.floor(Math.random() * 2)]);
+})
+
+helloWorldBtn.addEventListener("click", function() {
+    addToStorage("helloWorld");
 })
 
 function addToStorage(correct : string) : void{
