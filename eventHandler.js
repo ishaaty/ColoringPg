@@ -16,7 +16,7 @@ if (cor === "rainbowHeart") {
 if (cor === "ok") {
     selectedArray = okArray;
 }
-// filling pairsList for freeplay screen
+// filling pixelsList for freeplay screen
 for (let x = 0; x <= canvas.height; x += 40) {
     for (let y = 0; y <= canvas.width; y += 40) {
         let pixel = new Pixel(x, y, color);
@@ -56,13 +56,13 @@ canvas.addEventListener("click", function (event) {
 });
 // uncolors pixel
 canvas.addEventListener("dblclick", function (event) {
+    if (selectedArray !== freeplayArray) {
+        return;
+    }
     for (const p of selectedArray) {
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)) {
-            console.log(`Unclicked ${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
             p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1, "white");
-            if (p.constructor.name === "CheckablePixel") {
-                p.insertNum(p.xCoordinate, p.yCoordinate, p.num);
-            }
+            console.log(`Unclicked ${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
         }
     }
 });
@@ -72,10 +72,11 @@ clearBtn.addEventListener("click", function () {
     let pixelGrid = pixelsList[0]; // contains coordinates (0,0)
     pixelGrid.changeColor("black");
     pixelGrid.makeOrColorGrid(0, 0, canvas.width, canvas.height, 40);
-    // re-inserts num into grid
+    if (selectedArray === freeplayArray) {
+        return;
+    }
+    // re-inserts num into grid if its not the freeplayArray
     for (const r of selectedArray) {
-        if (r.constructor.name === "CheckablePixel") {
-            r.insertNum(r.xCoordinate, r.yCoordinate, r.num);
-        }
+        r.insertNum(r.xCoordinate, r.yCoordinate, r.num);
     }
 });
