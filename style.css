@@ -45,7 +45,7 @@ p {
 }
 
 .colorBtn:active {
-    border-color : gold;
+    border : solid white;
 }
 
 h1 {

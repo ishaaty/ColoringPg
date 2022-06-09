@@ -3,7 +3,7 @@
 // purpose of taking the button clicked on the first screen and making the requested array
 let freeplayBtn = document.querySelector("#freeplay");
 let randBtn = document.querySelector("#surprise");
-let options = ["rainbowHeart", "ok", "helloWorld", "sus"];
+let options = [];
 document.querySelectorAll(".pgSelection").forEach(function (elm) {
     options.push(elm.dataset.key);
     elm.addEventListener("click", function (event) {
