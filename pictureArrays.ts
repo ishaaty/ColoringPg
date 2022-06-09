@@ -2,6 +2,7 @@ let rainbowHeartArray = [];
 let freeplayArray = [];
 let okArray = [];
 let helloWorldArray = [];
+let susArray = [];
 
 // rainbowHeartArray coordinates
 for(let x = 0; x <= 800; x += 40){
@@ -276,6 +277,69 @@ for(let x = 0; x <= 800; x += 40){
         }
     }
 }
+
+
+
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        switch(true){
+            case(x === 160 && (y >= 280 && y <= 520)):
+            case(x === 200 && (y >= 280 && y <= 520)):
+                let ea : CheckablePixel = new CheckablePixel(x, y, "black", 1, "orangered");
+                susArray.push(ea);
+                break;
+            case((x === 600 || x === 560) && y === 320):
+                let eb : CheckablePixel = new CheckablePixel(x, y, "black", 13, "whitesmoke");
+                susArray.push(eb);
+                break;
+            case(x === 400 && (y >= 320 && y <= 360)):
+            case(x === 440 && (y >= 360 && y <= 400)):
+            case((x >= 480 && x <= 600) && y === 400):
+                let ec : CheckablePixel = new CheckablePixel(x, y, "black", 11, "grey");
+                susArray.push(ec);
+                break;
+            // light blue
+            case((x >= 440 && x <= 600) && y === 280):
+            case(x !== 560 && x !== 600 && (x >= 440 && x <= 640) && y === 320):
+            case((x >= 480 && x <= 640) && y === 360):
+                let ed : CheckablePixel = new CheckablePixel(x, y, "black", 6, "rgb(66, 175, 212)");
+                susArray.push(ed);
+                break;
+            case(x === 280 && (y >= 200 && y <= 680)):
+            case(x === 320 && (y >= 160 && y <= 680)):
+            case(x == 360 && y !== 320 && y !== 360 && (y >= 160 && y <= 520)):
+            case(x === 400 && ((y >= 160 && y < 280) || (y > 400 && y <= 520))):
+            case((x === 440 || x === 480) && ((y >= 160 && y <= 200 ) || (y >= 480 && y <= 520))):
+            case(x === 520 && ((y >= 160 && y <= 200) || (y >= 480 && y <= 680))):
+            case(x === 560 && (y === 200 || (y >= 480 && y <= 680))):
+                let ee : CheckablePixel = new CheckablePixel(x, y, "black", 0, "red");
+                susArray.push(ee);
+                break;
+            // black
+            case(x === 120 && (y >= 280 && y <= 520)):
+            case(x === 240 && (y >= 200 && y <= 680)):
+            case((x >= 320 && x <= 520) && y === 120):
+            case((x === 160 || x === 200) && (y === 240 || y === 560)):
+            case((x === 280 || x === 560) && y === 160):
+            case((x >= 360 && x <= 480) && y === 560):
+            case((x >= 440 && x <= 600) && (y === 240 || y === 440)):
+            case((x === 360 || x === 680) && (y === 320 || y === 360)):
+            case(x === 600 && (y === 200 || (y >= 480 && y <= 680))):
+            case((x === 360 || x === 480) && (y >= 600 && y <= 680)):
+            case(((x >= 280 && x <= 320) || (x >= 520 && x <= 560)) && y === 720):
+            case((x === 400 || x === 640) && (y === 280 || y === 400)):
+                let ef : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
+                susArray.push(ef);
+                break;
+            default:
+                let eg : CheckablePixel = new CheckablePixel(x, y, "black", 8, "blueviolet");
+                susArray.push(eg);
+                break;
+        }
+    }
+}
+
+
 
 
 for(let x = 0; x <= 800; x += 40){
