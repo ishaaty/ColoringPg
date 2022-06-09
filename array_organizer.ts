@@ -2,7 +2,7 @@
 // purpose of taking the button clicked on the first screen and making the requested array
 let freeplayBtn = document.querySelector("#freeplay") as HTMLButtonElement;
 let randBtn = document.querySelector("#surprise") as HTMLButtonElement;
-let options : string[] = [];
+let options : string[] = ["rainbowHeart", "ok", "helloWorld", "sus"];
 
 
 document.querySelectorAll<HTMLElement>(".pgSelection").forEach(function(elm){
