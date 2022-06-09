@@ -1,12 +1,16 @@
+html {
+    font-family : "Pangolin";
+}
+
 canvas {
     border: 3px solid black;
     padding-left: 0;
     padding-right: 0;
-    margin-left: auto;
+    margin-left: 500px;
     margin-right: auto;
     display: block;
     padding: 0;
-    margin: auto;
+    /* margin: auto; */
     display: block;
     position: absolute;
     top: 0;
@@ -27,7 +31,7 @@ button {
     grid-column : 1;
     margin : 10px;
     width : 180px;
-    height : 30px;
+    height : 35px;
     font-size : 18px
 }
 
@@ -35,13 +39,13 @@ p {
     display : grid;
     grid-column : 1;
     margin : 10px;
-    width : 180px;
+    width : 425px;
     height : 30px;
-    font-size : 20px;
+    font-size : 18px;
 }
 
 .colorBtn:active {
-    border-color : gold;
+    border : solid white;
 }
 
 h1 {
@@ -53,4 +57,23 @@ h1 {
     color : white;
 }
 
+.container {
+    display : grid;
+    grid-template-columns: 200px 200px;
+}
 
+.directions {
+    background-color : rgb(228, 178, 161);
+    width : 425px;
+}
+
+.direct, #currentColor {
+    white-space: nowrap;
+}
+
+#currentColor {
+    background-color : rgb(230, 148, 121);
+    width : 425px;
+    margin-left : 0px;
+    text-align: center;
+}

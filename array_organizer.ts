@@ -14,7 +14,6 @@ document.querySelectorAll<HTMLElement>(".pgSelection").forEach(function(elm){
     console.log(options)
 });
 
-
 randBtn.addEventListener("click", function() {
     addToStorage(options[Math.floor(Math.random() * options.length)]);
 })

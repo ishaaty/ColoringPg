@@ -4,13 +4,14 @@ html {
 }
 
 body {
-    height : 800px;
-    width : 1300px;
+    height : 600px;
+    width : 1100px;
     padding : 20px 10px;
     background-color: white;
     border-style:dashed;
     border-color: rgb(230, 148, 121);
     margin: auto;
+    margin-top :100px;
 }
 
 h1, p {
@@ -21,6 +22,7 @@ h1, p {
 .options {
     display : grid;
     grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px 150px;
     justify-content : center;
 }
 

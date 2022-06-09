@@ -18,7 +18,6 @@ if (cor === "ok") {
 }
 if (cor === "helloWorld") {
     selectedArray = helloWorldArray;
-    console.log(helloWorldArray);
 }
 if (cor === "sus") {
     selectedArray = susArray;
