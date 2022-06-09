@@ -20,6 +20,9 @@ if (cor === "helloWorld") {
     selectedArray = helloWorldArray;
     console.log(helloWorldArray);
 }
+if (cor === "sus") {
+    selectedArray = susArray;
+}
 // filling pixelsList for freeplay screen
 for (let x = 0; x <= canvas.height; x += 40) {
     for (let y = 0; y <= canvas.width; y += 40) {
