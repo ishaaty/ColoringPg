@@ -12,7 +12,7 @@ let rainbowHeartBtn = document.querySelector("#rainbowHeart");
 let okBtn = document.querySelector("#ok");
 let randBtn = document.querySelector("#surprise");
 let helloWorldBtn = document.querySelector("#helloWorld");
-let options = ["rainbowHeart", "ok"];
+let options = ["rainbowHeart", "ok", "helloWorld"];
 freeplayBtn.addEventListener("click", function () {
     addToStorage("freeplay");
 });
@@ -23,7 +23,7 @@ okBtn.addEventListener("click", function () {
     addToStorage("ok");
 });
 randBtn.addEventListener("click", function () {
-    addToStorage(options[Math.floor(Math.random() * 2)]);
+    addToStorage(options[Math.floor(Math.random() * 3)]);
 });
 helloWorldBtn.addEventListener("click", function () {
     addToStorage("helloWorld");

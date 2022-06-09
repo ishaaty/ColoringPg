@@ -74,7 +74,7 @@ class PixelNumber extends Pixel {
     }
 
     insertNum (x : number, y : number, num : number){
-        ctx.font = "15px Calibri";
+        ctx.font = "15px Pangolin";
         ctx.fillStyle = "black";
         ctx.fillText(`${num}`, x - 23, y - 20);
     }
