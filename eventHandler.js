@@ -52,14 +52,21 @@ document.querySelectorAll(".colorBtn").forEach(function (elm) {
         }
     });
 });
-// coloring in a pixel when user clicks
-canvas.addEventListener("click", function (event) {
+function colorPixel(event) {
     for (const p of selectedArray) {
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)) {
             console.log(`${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
             p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
         }
     }
+}
+// coloring in a pixel when user clicks
+canvas.addEventListener("mousedown", function (event) {
+    colorPixel(event);
+    canvas.addEventListener("mousemove", colorPixel);
+});
+canvas.addEventListener("mouseup", function () {
+    canvas.removeEventListener("mousemove", colorPixel);
 });
 // uncolors pixel
 canvas.addEventListener("dblclick", function (event) {
