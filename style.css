@@ -1,4 +1,4 @@
-body {
+html {
     font-family : "Pangolin";
 }
 
@@ -31,7 +31,7 @@ button {
     grid-column : 1;
     margin : 10px;
     width : 180px;
-    height : 30px;
+    height : 35px;
     font-size : 18px
 }
 
@@ -63,10 +63,17 @@ h1 {
 }
 
 .directions {
-    background-color: rgb(228, 178, 161);
+    background-color : rgb(228, 178, 161);
     width : 425px;
 }
 
-.direct, .currentColor {
+.direct, #currentColor {
     white-space: nowrap;
+}
+
+#currentColor {
+    background-color : rgb(230, 148, 121);
+    width : 425px;
+    margin-left : 0px;
+    text-align: center;
 }
