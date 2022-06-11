@@ -1,6 +1,7 @@
 "use strict";
 let currentColor = document.querySelector("#currentColor");
 let clearBtn = document.querySelector("#clear");
+let currentScreen = document.querySelector("#currentScreen");
 let cor = sessionStorage.getItem("first");
 let color = "black";
 let bol = true;
@@ -9,18 +10,23 @@ let selectedArray = [];
 // sets selected array
 if (cor === "freeplay") {
     selectedArray = freeplayArray;
+    currentScreen.textContent += "Free Play";
 }
 if (cor === "rainbowHeart") {
     selectedArray = rainbowHeartArray;
+    currentScreen.textContent += "Rainbow Heart";
 }
 if (cor === "ok") {
     selectedArray = okArray;
+    currentScreen.textContent += "'Ok.'";
 }
 if (cor === "helloWorld") {
     selectedArray = helloWorldArray;
+    currentScreen.textContent += "Hello World";
 }
 if (cor === "sus") {
     selectedArray = susArray;
+    currentScreen.textContent += "Amogus ඞ";
 }
 // filling pixelsList for freeplay screen
 for (let x = 0; x <= canvas.height; x += 40) {
@@ -59,7 +65,7 @@ function colorPixel(event) {
         }
     }
 }
-// coloring in a pixel when user clicks
+// coloring in a pixel when user clicks/drags
 canvas.addEventListener("mousedown", function (event) {
     colorPixel(event);
     canvas.addEventListener("mousemove", colorPixel);

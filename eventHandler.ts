@@ -1,5 +1,6 @@
 let currentColor = document.querySelector("#currentColor") as HTMLParagraphElement;
 let clearBtn = document.querySelector("#clear") as HTMLButtonElement;
+let currentScreen = document.querySelector("#currentScreen") as HTMLParagraphElement
 let cor = sessionStorage.getItem("first") as string;
 let color : string = "black";
 let bol : boolean = true;
@@ -9,18 +10,23 @@ let selectedArray : any = [];
 // sets selected array
 if (cor === "freeplay") {
     selectedArray = freeplayArray;
+    currentScreen.textContent += "Free Play";
 }
 if (cor === "rainbowHeart") {
     selectedArray = rainbowHeartArray;
+    currentScreen.textContent += "Rainbow Heart";
 }
 if (cor === "ok"){
     selectedArray = okArray;
+    currentScreen.textContent += "'Ok.'";
 }
 if (cor === "helloWorld") {
     selectedArray = helloWorldArray;
+    currentScreen.textContent += "Hello World";
 }
 if (cor === "sus"){
     selectedArray = susArray;
+    currentScreen.textContent += "Amogus ඞ";
 }
 
 // filling pixelsList for freeplay screen
@@ -65,8 +71,7 @@ function colorPixel(event : MouseEvent){
     }
 }
 
-// coloring in a pixel when user clicks
-
+// coloring in a pixel when user clicks/drags
 canvas.addEventListener("mousedown", function(event : MouseEvent){
     colorPixel(event)
     canvas.addEventListener("mousemove", colorPixel);
