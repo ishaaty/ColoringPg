@@ -1,5 +1,6 @@
 let currentColor = document.querySelector("#currentColor") as HTMLParagraphElement;
 let clearBtn = document.querySelector("#clear") as HTMLButtonElement;
+let currentScreen = document.querySelector("#currentScreen") as HTMLParagraphElement
 let cor = sessionStorage.getItem("first") as string;
 let color : string = "black";
 let bol : boolean = true;
@@ -9,18 +10,23 @@ let selectedArray : any = [];
 // sets selected array
 if (cor === "freeplay") {
     selectedArray = freeplayArray;
+    currentScreen.textContent += "Free Play";
 }
 if (cor === "rainbowHeart") {
     selectedArray = rainbowHeartArray;
+    currentScreen.textContent += "Rainbow Heart";
 }
 if (cor === "ok"){
     selectedArray = okArray;
+    currentScreen.textContent += "'Ok.'";
 }
 if (cor === "helloWorld") {
     selectedArray = helloWorldArray;
+    currentScreen.textContent += "Hello World";
 }
 if (cor === "sus"){
     selectedArray = susArray;
+    currentScreen.textContent += "Amogus ඞ";
 }
 if (cor === "shroom") {
     selectedArray = shroomArray;
@@ -63,13 +69,12 @@ function colorPixel(event : MouseEvent){
     for (const p of selectedArray){
         if ((event.offsetX <= p.xCoordinate && event.offsetX >= p.xCoordinate - 40) && (event.offsetY <= p.yCoordinate && event.offsetY >= p.yCoordinate - 40)){
                 console.log(`${p.color}: (${p.xCoordinate}, ${p.yCoordinate})`);
-            p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
+                p.makeOrColorGrid(p.xCoordinate - 38, p.yCoordinate - 38, p.xCoordinate - 1, p.yCoordinate - 1, 1);
         }
     }
 }
 
-// coloring in a pixel when user clicks
-
+// coloring in a pixel when user clicks/drags
 canvas.addEventListener("mousedown", function(event : MouseEvent){
     colorPixel(event)
     canvas.addEventListener("mousemove", colorPixel);
