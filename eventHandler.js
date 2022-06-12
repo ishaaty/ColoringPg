@@ -28,6 +28,9 @@ if (cor === "sus") {
     selectedArray = susArray;
     currentScreen.textContent += "Amogus ඞ";
 }
+if (cor === "shroom") {
+    selectedArray = shroomArray;
+}
 // filling pixelsList for freeplay screen
 for (let x = 0; x <= canvas.height; x += 40) {
     for (let y = 0; y <= canvas.width; y += 40) {

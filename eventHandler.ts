@@ -23,6 +23,9 @@ if (cor === "helloWorld") {
 if (cor === "sus"){
     selectedArray = susArray;
 }
+if (cor === "shroom") {
+    selectedArray = shroomArray;
+}
 
 // filling pixelsList for freeplay screen
 for(let x = 0; x <= canvas.height; x += 40){
