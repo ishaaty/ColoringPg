@@ -10,23 +10,18 @@ let selectedArray : any = [];
 // sets selected array
 if (cor === "freeplay") {
     selectedArray = freeplayArray;
-    currentScreen.textContent += "Free Play";
 }
 if (cor === "rainbowHeart") {
     selectedArray = rainbowHeartArray;
-    currentScreen.textContent += "Rainbow Heart";
 }
 if (cor === "ok"){
     selectedArray = okArray;
-    currentScreen.textContent += "'Ok.'";
 }
 if (cor === "helloWorld") {
     selectedArray = helloWorldArray;
-    currentScreen.textContent += "Hello World";
 }
 if (cor === "sus"){
     selectedArray = susArray;
-    currentScreen.textContent += "Amogus ඞ";
 }
 
 // filling pixelsList for freeplay screen
