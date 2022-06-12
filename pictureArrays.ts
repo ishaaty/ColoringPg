@@ -3,6 +3,7 @@ let freeplayArray = [];
 let okArray = [];
 let helloWorldArray = [];
 let susArray = [];
+let shroomArray = [];
 
 // rainbowHeartArray coordinates
 for(let x = 0; x <= 800; x += 40){
@@ -339,8 +340,52 @@ for(let x = 0; x <= 800; x += 40){
     }
 }
 
-
-
+// Super mushroom array
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        switch(true){
+            case((x >= 320 && x<= 520) && (y === 120)):
+            case((x === 240 || x === 280 || x === 560 || x === 600) && (y === 160)):
+            case((x === 200 || x === 640) && (y === 200)):
+            case((x === 160 || x === 680) && (y === 240 || y === 280 || y === 520)):
+            case((x === 120 || x === 720) && (y >= 320 && y <= 480)):
+            case((x === 200 || x === 640 || x === 680) && (y === 520)):
+            case((x >= 240 && x <= 600) && (y === 480)):
+            case((x === 600) && (y === 520)):
+            case((x === 200 || x === 640) && (y === 560 || y === 600)):
+            case((x === 240 || x === 600) && (y === 640)):
+            case((x >= 280 && x <= 560) && (y === 680)):
+            case((x === 360 || x === 480) && (y === 520 || y === 560)):
+                let ef : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
+                shroomArray.push(ef);
+                break;
+            case((x >= 160 && x <= 240) && (y === 320)):
+            case((x >= 320 && x <= 520) && (y >= 160 && y <= 240)):
+            case((x === 280) && (y === 280 || y === 320)): 
+            case((x === 400 || y === 440) && (y === 160)): 
+            case((x >= 400 && x <= 520) && (y === 200)):  
+            case((x === 560) && (y === 280 || y === 320)):
+            case((x === 200) && (y === 360 || y === 480)):     
+            case((x === 240) && (y >= 400 && y <= 480)):   
+            case((x === 320) && (y === 160)):
+            case((x >= 600 && x <= 680) && (y === 320)):
+            case((x === 640) && (y === 360 || y === 480)):
+            case((x === 600) && (y >= 400 && y <= 480)):
+            case((x >= 280 && x <= 560) && (y === 440)):
+            case((x === 280 || x === 320 || x === 520 || x === 560) && (y === 400)):
+            case((x === 240 || x === 280 || x === 560 || x === 600) && (y === 360)):
+            case((x === 600) && (y >= 360 && y <= 440)):
+            case((x === 640) && (y === 480)):
+                let ex : CheckablePixel = new CheckablePixel(x, y, "black", 0, "red");
+                shroomArray.push(ex);
+                break;
+            default:
+                let eg : CheckablePixel = new CheckablePixel(x, y, "black", 13, "whitesmoke");
+                shroomArray.push(eg);
+                break;
+        }
+    }
+}
 
 for(let x = 0; x <= 800; x += 40){
     for (let y = 0; y <= 800; y += 40){
