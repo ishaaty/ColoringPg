@@ -83,20 +83,25 @@ class PixelNumber extends Pixel {
 
 class CheckablePixel extends PixelNumber {
     correctColor : string;
+    allowColoring : boolean;
 
     constructor(xCoordinate : number, yCoordinate : number, color: string = "black", num : number, correctColor : string) {
         super(xCoordinate, yCoordinate, color, num);
         this.correctColor = correctColor;
+        this.allowColoring = true;
     }
 
     makeOrColorGrid(xMin : number, yMin : number, xMax : number, yMax : number, inc : number) {
-        if (this.color === this.correctColor) {
-            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
-        } else {
-            super.changeColor("white")
-            super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
-            ctx.fillStyle = "black";
-            ctx.fillText(`X${this.num}X`, this.xCoordinate - 32, this.yCoordinate - 15);
+        if (this.allowColoring === true) {
+            if (this.color === this.correctColor) {
+                super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
+                this.allowColoring = false;
+            } else {
+                super.changeColor("white")
+                super.makeOrColorGrid(xMin, yMin, xMax, yMax, inc);
+                ctx.fillStyle = "black";
+                ctx.fillText(`X${this.num}X`, this.xCoordinate - 32, this.yCoordinate - 15);
+            }
         }
     }
 
