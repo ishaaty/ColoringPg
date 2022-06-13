@@ -5,11 +5,8 @@ let okArray = [];
 let helloWorldArray = [];
 let susArray = [];
 let shroomArray = [];
-<<<<<<< HEAD
 let parrotArray = [];
-=======
 let squidArray = [];
->>>>>>> 81d4a68bf2edba4d58639558e76221ab213b11ac
 // rainbowHeartArray coordinates
 for (let x = 0; x <= 800; x += 40) {
     for (let y = 0; y <= 800; y += 40) {
@@ -421,7 +418,7 @@ for (let x = 0; x <= 800; x += 40) {
             case ((x === 240 || x === 400 || x === 560) && (y === 560)):
             case ((x >= 240 && x <= 560) && (y === 600 || y === 640 || y === 680)):
             case ((x === 240 || x === 320 || x === 440 || x === 480 || x === 560) && (y === 720)):
-                let ey = new CheckablePixel(x, y, "black", 10, "pink");
+                let ey = new CheckablePixel(x, y, "black", 10, "rgb(238, 89, 114)");
                 squidArray.push(ey);
                 break;
             default:

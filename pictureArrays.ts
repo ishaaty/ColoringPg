@@ -425,7 +425,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 240 || x === 400 || x === 560) && (y === 560)):
             case((x >= 240 && x <= 560) && (y === 600 || y === 640 || y === 680)):
             case((x === 240 || x === 320 || x === 440 || x === 480 || x === 560) && (y === 720)):
-                let ey : CheckablePixel = new CheckablePixel(x, y, "black", 10, "pink");
+                let ey : CheckablePixel = new CheckablePixel(x, y, "black", 10, "rgb(238, 89, 114)");
                 squidArray.push(ey);
                 break;
             default:

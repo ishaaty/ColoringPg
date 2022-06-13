@@ -26,7 +26,7 @@ if (cor === "sus"){
 if (cor === "shroom") {
     selectedArray = shroomArray;
 }
-if (cor = "parrot"){
+if (cor === "parrot"){
     selectedArray = parrotArray;
 }
 if (cor === "squid") {
