@@ -5,6 +5,7 @@ let helloWorldArray = [];
 let susArray = [];
 let shroomArray = [];
 let parrotArray = [];
+let squidArray = [];
 
 // rainbowHeartArray coordinates
 for(let x = 0; x <= 800; x += 40){
@@ -387,6 +388,54 @@ for(let x = 0; x <= 800; x += 40){
         }
     }
 }
+// squid
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        switch(true){
+            case((x === 400) && (y === 80 || y === 440 || y === 520 || y === 680)):
+            case((x === 360 || x === 440) && (y === 120)):
+            case((x === 320 || x === 480) && (y === 160)):
+            case((x === 280 || x === 520) && (y === 200)):
+            case((x === 240 || x === 560) && (y === 240)):
+            case((x === 200 || x === 600) && (y === 280)):
+            case((x === 160 || x === 640) && (y === 320)):
+            case((x === 120 || x === 680) && (y === 360)):
+            case((x === 80 || x === 720) && (y === 400  || y === 440)):
+            case((x === 120 || x === 160 || x === 640 || x === 680 || x === 320 || x === 360 || x === 440 || x === 480) && (y === 480)):
+            case((x === 200 || x === 600) && (y >= 520 && y <= 720)):
+            case((x === 280 || x === 360 || x === 520) && (y === 720)):
+            case((x === 240 || x === 320 || x === 480 || x === 560) && (y === 760)):
+            case((x === 240) && (y >= 440 && y <= 520)):
+            case(((x <= 280 && y>= 360) || (x >= 440 && x <= 520)) && (y === 400)):
+            case((x === 560) && (y >= 400 && y <= 520)):
+            case((x >= 280 && x <= 520) && (y === 560)):
+            case((x === 320 || x === 360 || x === 440 || x === 480) && (y === 440)):
+                let ex : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
+                squidArray.push(ex);
+                break;
+            case((x === 400) && (y === 120 || y === 400)):
+            case((x >= 360 && x <= 440) && (y === 160)):
+            case((x >= 320 && x <= 480) && (y === 200)):
+            case((x >= 280 && x <= 520) && (y === 240)):
+            case((x >= 240 && x <= 560) && (y === 280)):
+            case((x >= 200 && x <= 600) && (y === 320)):
+            case((x >= 160 && x <= 640) && (y === 360)):
+            case(((x >= 120 && x <= 240) || (x >= 560 && x <= 680)) && (y === 400 || y === 440)):
+            case((x === 200 || x === 600) && (y === 480)):
+            case((x === 240 || x === 400 || x === 560) && (y === 560)):
+            case((x >= 240 && x <= 560) && (y === 600 || y === 640 || y === 680)):
+            case((x === 240 || x === 320 || x === 440 || x === 480 || x === 560) && (y === 720)):
+                let ey : CheckablePixel = new CheckablePixel(x, y, "black", 10, "pink");
+                squidArray.push(ey);
+                break;
+            default:
+                let eg : CheckablePixel = new CheckablePixel(x, y, "black", 13, "whitesmoke");
+                squidArray.push(eg);
+                break;
+        }
+    }
+}
+
 
 for(let x = 0; x <= 800; x += 40){
     for (let y = 0; y <= 800; y += 40){
