@@ -44,8 +44,8 @@ p {
     font-size : 18px;
 }
 
-.colorBtn:active {
-    border : solid white;
+.colorBtn:active, #clear:active, #goHome:active {
+    border : solid rgb(230, 148, 121);
 }
 
 h1 {
@@ -54,7 +54,7 @@ h1 {
 }
 
 #black {
-    color : gold;
+    color : white;
 }
 
 .container {
