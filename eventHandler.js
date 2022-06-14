@@ -7,6 +7,7 @@ let color = "black";
 let bol = true;
 let pixelsList = [];
 let selectedArray = [];
+let points = 0;
 // sets selected array
 if (cor === "freeplay") {
     selectedArray = freeplayArray;
@@ -32,7 +33,7 @@ if (cor === "parrot") {
 if (cor === "squid") {
     selectedArray = squidArray;
 }
-if (cor = "tree") {
+if (cor === "tree") {
     selectedArray = treeArray;
 }
 // filling pixelsList for freeplay screen

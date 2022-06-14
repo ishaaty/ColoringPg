@@ -6,6 +6,7 @@ let color : string = "black";
 let bol : boolean = true;
 let pixelsList : any = [];
 let selectedArray : any = [];
+let points = 0;
 
 // sets selected array
 if (cor === "freeplay") {
@@ -32,7 +33,7 @@ if (cor === "parrot"){
 if (cor === "squid") {
     selectedArray = squidArray;
 }
-if (cor = "tree") {
+if (cor === "tree") {
     selectedArray = treeArray;
 }
 
@@ -87,7 +88,6 @@ canvas.addEventListener("mousedown", function(event : MouseEvent){
 canvas.addEventListener("mouseup", function (){
     canvas.removeEventListener("mousemove", colorPixel);
 });
-
 
 
 // uncolors pixel
