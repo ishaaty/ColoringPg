@@ -7,6 +7,7 @@ let susArray = [];
 let shroomArray = [];
 let parrotArray = [];
 let squidArray = [];
+let treeArray = [];
 // rainbowHeartArray coordinates
 for (let x = 0; x <= 800; x += 40) {
     for (let y = 0; y <= 800; y += 40) {
@@ -499,6 +500,41 @@ for (let x = 0; x <= 800; x += 40) {
             default:
                 let ga = new CheckablePixel(x, y, "black", 6, "rgb(66, 175, 212)");
                 parrotArray.push(ga);
+                break;
+        }
+    }
+}
+for (let x = 0; x <= 800; x += 40) {
+    for (let y = 0; y <= 800; y += 40) {
+        switch (true) {
+            case ((x === 400 || x === 440) && y >= 600 && y <= 680):
+                let nb = new CheckablePixel(x, y, "black", 12, "brown");
+                treeArray.push(nb);
+                break;
+            case ((x === 400 || x === 440) && y >= 160 && y <= 200):
+            case (x === 400 && (y === 360 || y === 560)):
+                let nd = new CheckablePixel(x, y, "black", 3, "yellow");
+                treeArray.push(nd);
+                break;
+            case ((x === 320 && y === 400) || (x === 480 && y === 280) || (x === 520 && y === 560)):
+                let ne = new CheckablePixel(x, y, "black", 7, "rgb(32, 32, 205)");
+                treeArray.push(ne);
+                break;
+            case ((x === 400 && y === 280) || (x === 440 && y === 440) || (x === 320 && y === 520)):
+                let nf = new CheckablePixel(x, y, "black", 0, "red");
+                treeArray.push(nf);
+                break;
+            case ((x === 400 || x === 440) && y >= 240 && y <= 560):
+            case ((x === 360 || x === 480) && y >= 280 && y <= 560):
+            case ((x === 320 || x === 520) && y >= 400 && y <= 560):
+            case ((x === 280 || x === 560) && y >= 480 && y <= 560):
+            case ((x === 240 || x === 600) && y === 560):
+                let nc = new CheckablePixel(x, y, "black", 5, "green");
+                treeArray.push(nc);
+                break;
+            default:
+                let na = new CheckablePixel(x, y, "black", 14, "black");
+                treeArray.push(na);
                 break;
         }
     }
