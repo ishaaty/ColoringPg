@@ -4,7 +4,9 @@ let okArray = [];
 let helloWorldArray = [];
 let susArray = [];
 let shroomArray = [];
+let parrotArray = [];
 let squidArray = [];
+let treeArray = [];
 
 // rainbowHeartArray coordinates
 for(let x = 0; x <= 800; x += 40){
@@ -424,7 +426,7 @@ for(let x = 0; x <= 800; x += 40){
             case((x === 240 || x === 400 || x === 560) && (y === 560)):
             case((x >= 240 && x <= 560) && (y === 600 || y === 640 || y === 680)):
             case((x === 240 || x === 320 || x === 440 || x === 480 || x === 560) && (y === 720)):
-                let ey : CheckablePixel = new CheckablePixel(x, y, "black", 10, "pink");
+                let ey : CheckablePixel = new CheckablePixel(x, y, "black", 10, "rgb(238, 89, 114)");
                 squidArray.push(ey);
                 break;
             default:
@@ -434,6 +436,122 @@ for(let x = 0; x <= 800; x += 40){
         }
     }
 }
+
+
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        switch(true){
+            case(((x >= 40 && x <= 200) || (x >= 480 && x <= 800)) && (y === 520)):
+            case((x === 40 || x === 160 || x === 680 || x === 760) && y === 560):
+            case(x === 800 && (y === 440 || y === 480 || y === 600)):
+                let gz : CheckablePixel = new CheckablePixel(x, y, "black", 12, "brown");
+                parrotArray.push(gz);
+                break;
+            case((x === 440 && y === 240) || (x === 480 && y === 320)):
+                let gy : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
+                parrotArray.push(gy);
+                break;
+            case((x === 520 && y >= 240 && y <= 320) || (x === 480 && y >= 240 && y <= 280)):
+                let gx : CheckablePixel = new CheckablePixel(x, y, "black", 2, "orange");
+                parrotArray.push(gx);
+                break;
+            case((x === 400) && (y >= 200 && y <= 280)):
+            case((x === 440) && (y === 200 || y === 280 || y === 320)):
+                let gk : CheckablePixel = new CheckablePixel(x, y, "black", 13, "whitesmoke");
+                parrotArray.push(gk);
+                break;
+            case(x === 40 && (y === 480 || y === 600)):
+            case(x === 80 && (y === 480 || y === 560)):
+            case(x === 720 && y >= 560 && y <= 600):
+            case(x === 760 && (y === 400 || y === 440 || y === 600)):
+            case(x === 800 && (y === 4000 || y === 640)):
+                let gf : CheckablePixel = new CheckablePixel(x, y, "black", 4, "yellowgreen");
+                parrotArray.push(gf);
+                break;
+            case((x >= 200 && x <= 240) && y === 600):
+            case((x >= 280 && x <= 320) && y === 560):
+                let gh : CheckablePixel = new CheckablePixel(x, y, "black", 7, "rgb(32, 32, 205)");
+                parrotArray.push(gh);
+                break;
+            case(x >= 200 && x <= 280 && y === 640):
+            case(x === 240 && y === 680):
+            case( x >= 280 && x <= 320 && y === 600):
+            case(x === 360 && y >= 520 && y <= 560):
+            case(x === 400 && y === 480):
+                let gi : CheckablePixel = new CheckablePixel(x, y, "black", 8, "blueviolet");
+                parrotArray.push(gi);
+                break;
+            case(x >= 200 && x <= 240 && y === 560):
+            case(x >= 240 && x <= 320 && y === 520):
+                let gg : CheckablePixel = new CheckablePixel(x, y, "black", 5, "green");
+                parrotArray.push(gg);
+                break;
+            case(x === 200 && y >= 680 && y <= 720):
+            case( x >= 360 && y <= 400 && y === 600):
+            case((x === 400 || x === 440) && (y === 520 || y === 560)):
+            case(x === 440 && (y >= 360 && y <= 480)):
+            case(x === 480 && y >= 400 && y <= 480):
+            case(x === 400 && (y >= 320 && y <= 400)):
+            case(x === 360 && y >= 200 && y <= 360):
+            case(x === 320 && (y >= 320 && y <= 360)):
+            case(x === 280 && y === 400):
+            case(x >= 400 && x <= 480 && y === 160):
+            case(x >= 480 && x <= 520 && y === 200):
+                let gv : CheckablePixel = new CheckablePixel(x, y, "black", 0, "red");
+                parrotArray.push(gv);
+                break;
+            case((x == 320 || x === 360) && (y >= 400 && y <= 480)):
+            case((x >= 280 && x <= 400) && y === 440):
+            case((x >= 240 && x <= 360) && y === 480):
+                let gl : CheckablePixel = new CheckablePixel(x, y, "black", 3, "yellow");
+                parrotArray.push(gl);
+                break;
+            default:
+                let ga : CheckablePixel = new CheckablePixel(x, y, "black", 6, "rgb(66, 175, 212)");
+                parrotArray.push(ga);
+                break;
+        }
+    }
+}
+
+
+for(let x = 0; x <= 800; x += 40){
+    for (let y = 0; y <= 800; y += 40){
+        switch(true){
+            case((x === 400 || x === 440) && y >= 600 && y <= 680):
+                let nb : CheckablePixel = new CheckablePixel(x, y, "black", 12, "brown");
+                treeArray.push(nb);
+                break;
+            case((x === 400 || x === 440) && y >= 160 && y <= 200):
+            case(x === 400 && (y === 360 || y === 560)):
+                let nd : CheckablePixel = new CheckablePixel(x, y, "black", 3, "yellow");
+                treeArray.push(nd);
+                break;
+            case((x === 320 && y === 400) || (x === 480 && y === 280) || (x === 520 && y === 560)):
+                let ne : CheckablePixel = new CheckablePixel(x, y, "black", 7, "rgb(32, 32, 205)");
+                treeArray.push(ne);
+                break;
+            case((x === 400 && y === 280) || (x === 440 && y === 440) || (x === 320 && y === 520)):
+                let nf : CheckablePixel = new CheckablePixel(x, y, "black", 0, "red");
+                treeArray.push(nf);
+                break;
+            case((x === 400 || x === 440) && y >= 240 && y <= 560):
+            case((x === 360 || x === 480) && y >= 280 && y <= 560):
+            case((x === 320 || x === 520) && y >= 400 && y <= 560):
+            case((x === 280 || x === 560) && y >= 480 && y <= 560):
+            case((x === 240 || x === 600) && y === 560):
+                let nc : CheckablePixel = new CheckablePixel(x, y, "black", 5, "green");
+                treeArray.push(nc);
+                break;
+            default:
+                let na : CheckablePixel = new CheckablePixel(x, y, "black", 14, "black");
+                treeArray.push(na);
+                break;
+        }
+    }
+}
+
+
 
 
 for(let x = 0; x <= 800; x += 40){

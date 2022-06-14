@@ -26,8 +26,14 @@ if (cor === "sus"){
 if (cor === "shroom") {
     selectedArray = shroomArray;
 }
+if (cor === "parrot"){
+    selectedArray = parrotArray;
+}
 if (cor === "squid") {
     selectedArray = squidArray;
+}
+if (cor = "tree") {
+    selectedArray = treeArray;
 }
 
 // filling pixelsList for freeplay screen
