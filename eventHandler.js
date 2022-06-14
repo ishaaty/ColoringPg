@@ -32,7 +32,7 @@ if (cor === "parrot") {
 if (cor === "squid") {
     selectedArray = squidArray;
 }
-if (cor = "tree") {
+if (cor === "tree") {
     selectedArray = treeArray;
 }
 // filling pixelsList for freeplay screen
